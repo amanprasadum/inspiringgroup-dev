@@ -329,7 +329,8 @@
         /* What We Do Section - Service cards with hover effects */
         .what-we-do {
             padding: 80px 0;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            background: linear-gradient(135deg, #1e5128 0%, #2d6a4f 100%);
+            color: white;
             position: relative;
         }
 
@@ -340,8 +341,8 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(0,0,0,0.02)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-            opacity: 0.5;
+            background: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&h=800&fit=crop') center/cover;
+            opacity: 0.1;
         }
 
         .what-we-do .container {
@@ -351,17 +352,18 @@
 
         .service-card {
             border-radius: 10px;
-            transition: all 0.3s;
+            transition: all 0.4s;
             height: 100%;
-            background: white;
-            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
-            border: 1px solid rgba(0, 0, 0, 0.05);
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             overflow: hidden;
         }
 
         .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+            background: white;
         }
 
         .service-card img {
@@ -373,7 +375,7 @@
         }
 
         .service-card:hover img {
-            transform: scale(1.05);
+            transform: scale(1.08);
         }
 
         .service-card h3 {
