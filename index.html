@@ -5,17 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inspiring Group - Serving Humankind Since 2010</title>
     
-    <!-- Bootstrap 5.3.3 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         :root {
-            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --primary-blue: #2E5C8A;
+            --primary-green: #4CAF50;
+            --light-green: #8BC34A;
+            --dark-bg: #1a1a2e;
+            --light-bg: #f5f5f5;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         
         body {
@@ -23,724 +34,1072 @@
             overflow-x: hidden;
         }
         
-        /* ========== HEADER / NAVBAR STYLES ========== */
+        /* Top Contact Bar - Header with logo and contact info */
+        .top-contact-bar {
+            background: #f8f9fa;
+            padding: 10px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .top-bar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .top-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .top-logo img {
+            width: 35px;
+            height: 35px;
+        }
+        
+        .top-logo span {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--primary-blue);
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+        }
+        
+        .contact-item i {
+            color: var(--primary-blue);
+            font-size: 20px;
+        }
+        
+        .contact-item strong {
+            color: #333;
+        }
+        
+        .contact-item span {
+            color: #666;
+        }
+        
+        /* Navigation - Main menu with dropdowns */
         .navbar {
-            transition: all 0.3s ease;
-            padding: 1rem 0;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            background: var(--primary-blue) !important;
+            padding: 15px 0;
+        }
+        
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         
         .navbar-brand {
-            font-size: 1.5rem;
-            font-weight: 700;
-            background: var(--primary-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            display: none;
         }
         
-        /* Fix navbar spacing - proper distribution */
-        .navbar .container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        
-        .navbar-collapse {
-            flex-grow: 0;
-        }
-        
-        .navbar-nav {
-            margin: 0 auto;
-        }
-        
-        .nav-link {
+        .navbar-nav .nav-link {
+            color: white !important;
             font-weight: 500;
-            color: #333;
-            margin: 0 0.5rem;
-            transition: color 0.3s ease;
+            margin: 0 15px;
+            transition: all 0.3s;
         }
         
-        .nav-link:hover {
-            color: #667eea;
+        .navbar-nav .nav-link:hover {
+            color: var(--light-green) !important;
         }
         
-        /* Social icons in navbar - fixed positioning */
-        .navbar-social {
-            display: flex;
-            gap: 0.5rem;
-            margin-left: 2rem;
-        }
-        
-        .navbar-social a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 35px;
-            height: 35px;
-            background: var(--primary-gradient);
-            border-radius: 50%;
-            color: white;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
-        
-        .navbar-social a:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-        }
-        
-        /* Dropdown menu styles */
-        .dropdown-menu {
+        /* Dropdown Menu Styling */
+        .navbar-nav .dropdown-menu {
+            background: var(--primary-blue);
             border: none;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            border-radius: 10px;
+            border-radius: 0;
+            margin-top: 0;
+            min-width: 250px;
         }
         
-        .dropdown-item {
-            padding: 0.7rem 1.5rem;
-            transition: all 0.3s ease;
-        }
-        
-        .dropdown-item:hover {
-            background: var(--primary-gradient);
+        .navbar-nav .dropdown-menu .dropdown-item {
             color: white;
+            padding: 10px 20px;
+            transition: all 0.3s;
+            border-left: 3px solid transparent;
         }
         
-        /* ========== HERO SLIDER STYLES ========== */
-        .hero-carousel {
-            height: 100vh;
+        .navbar-nav .dropdown-menu .dropdown-item:hover {
+            background: var(--light-green);
+            color: white;
+            padding-left: 25px;
+            border-left-color: white;
+        }
+        
+        .navbar-nav .dropdown-toggle::after {
+            margin-left: 5px;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 18px;
+            transition: all 0.3s;
+        }
+        
+        .social-icons a:hover {
+            color: var(--light-green);
+            transform: translateY(-3px);
+        }
+        
+        /* Bootstrap Carousel Hero Section - Using Bootstrap Carousel for proper centering */
+        #heroCarousel {
             position: relative;
-            margin-top: 76px;
-        }
-        
-        /* Fade transition for carousel */
-        .carousel-fade .carousel-item {
-            opacity: 0;
-            transition-duration: 1s;
-            transition-property: opacity;
-        }
-        
-        .carousel-fade .carousel-item.active {
-            opacity: 1;
         }
         
         .carousel-item {
-            height: 100vh;
+            height: 600px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             position: relative;
         }
         
-        .carousel-item img {
-            object-fit: cover;
-            height: 100%;
-            width: 100%;
-            filter: brightness(0.7);
+        /* Dark overlay for better text readability */
+        .carousel-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(30, 60, 114, 0.85) 0%, rgba(42, 82, 152, 0.75) 100%);
+            z-index: 1;
         }
         
+        /* Carousel content wrapper - ensures perfect centering */
         .carousel-caption {
+            position: absolute;
             top: 50%;
-            transform: translateY(-50%);
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            text-align: center;
+            width: 90%;
+            max-width: 800px;
             bottom: auto;
-            z-index: 10;
+            right: auto;
         }
         
         .carousel-caption h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            text-shadow: 2px 2px 20px rgba(0,0,0,0.5);
-            animation: fadeInUp 1s ease;
+            font-size: 52px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            line-height: 1.3;
+            color: white;
+        }
+        
+        .carousel-caption .highlight {
+            color: var(--light-green);
         }
         
         .carousel-caption p {
-            font-size: 1.5rem;
-            margin: 2rem 0;
-            animation: fadeInUp 1.2s ease;
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        /* Get Started Button */
-        .btn-get-started {
-            padding: 1rem 2.5rem;
-            font-size: 1.1rem;
-            border-radius: 50px;
-            border: none;
-            background: var(--primary-gradient);
+            font-size: 22px;
+            margin-bottom: 30px;
+            font-weight: 300;
             color: white;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            animation: fadeInUp 1.4s ease;
+        }
+        
+        /* Carousel background images using Unsplash */
+        .carousel-item:nth-child(1) {
+            background-image: url('https://images.unsplash.com/photo-1560493676-04071c5f467b?w=1920&h=600&fit=crop');
+        }
+        
+        .carousel-item:nth-child(2) {
+            background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&h=600&fit=crop');
+        }
+        
+        .carousel-item:nth-child(3) {
+            background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&h=600&fit=crop');
+        }
+        
+        /* Custom carousel controls styling */
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 50px;
+            height: 50px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 1;
+        }
+        
+        .carousel-control-prev {
+            left: 20px;
+        }
+        
+        .carousel-control-next {
+            right: 20px;
+        }
+        
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            background: rgba(255,255,255,0.4);
+        }
+        
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            width: 20px;
+            height: 20px;
+        }
+        
+        /* Carousel indicators styling */
+        .carousel-indicators {
+            bottom: 30px;
+        }
+        
+        .carousel-indicators button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.5);
+            border: none;
+            transition: all 0.3s;
+        }
+        
+        .carousel-indicators button.active {
+            width: 30px;
+            border-radius: 10px;
+            background: white;
+        }
+        
+        .btn-primary-custom {
+            background: var(--primary-green);
+            color: white;
+            padding: 14px 35px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 16px;
+            transition: all 0.3s;
             text-decoration: none;
             display: inline-block;
         }
         
-        .btn-get-started:hover {
+        .btn-primary-custom:hover {
+            background: var(--light-green);
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
             color: white;
         }
         
-        /* ========== SECTION DIVIDER STYLES ========== */
-        .section-divider {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 4rem 0;
-        }
-        
-        .section-divider::before,
-        .section-divider::after {
-            content: '';
-            flex: 1;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, #667eea, transparent);
-        }
-        
-        .section-divider-icon {
-            padding: 0 2rem;
-            font-size: 2rem;
-            background: var(--primary-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        /* ========== ABOUT SECTION STYLES ========== */
-        .about-section {
-            padding: 6rem 0;
-            background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
-        }
-        
+        /* Section Styling - Common section title styling */
         .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            position: relative;
-            display: inline-block;
-            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 50px;
         }
         
-        .section-title::after {
+        .section-title h2 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .section-title .underline {
+            width: 80px;
+            height: 4px;
+            background: var(--primary-green);
+            margin: 0 auto;
+        }
+        
+        /* What We Do Section - Service cards with hover effects */
+        .what-we-do {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            position: relative;
+        }
+        
+        .what-we-do::before {
             content: '';
             position: absolute;
-            bottom: -10px;
+            top: 0;
             left: 0;
-            width: 60px;
-            height: 4px;
-            background: var(--primary-gradient);
-            border-radius: 2px;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(0,0,0,0.02)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.5;
         }
         
-        .about-image {
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-            width: 100%;
-            height: auto;
-        }
-        
-        .btn-modern {
-            padding: 0.8rem 2rem;
-            font-size: 1rem;
-            border-radius: 50px;
-            border: none;
-            background: var(--primary-gradient);
-            color: white;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-        }
-        
-        .btn-modern:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
-            color: white;
-        }
-        
-        /* ========== WHAT WE DO SECTION STYLES ========== */
-        .what-we-do-section {
-            padding: 6rem 0;
-            background: white;
+        .what-we-do .container {
+            position: relative;
+            z-index: 1;
         }
         
         .service-card {
-            border-radius: 20px;
-            background: white;
-            box-shadow: 0 5px 30px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
+            text-align: center;
+            padding: 30px;
+            border-radius: 15px;
+            transition: all 0.4s;
             height: 100%;
-            border: none;
-            margin-bottom: 2rem;
-            overflow: hidden;
+            background: white;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border: 1px solid rgba(0,0,0,0.05);
         }
         
         .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 50px rgba(0,0,0,0.15);
+            transform: translateY(-15px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            border-color: var(--primary-green);
         }
         
-        .service-card-image {
+        .service-card img {
             width: 100%;
-            height: 250px;
+            height: 200px;
             object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            transition: all 0.3s;
         }
         
-        .service-card-body {
-            padding: 2rem;
+        .service-card:hover img {
+            transform: scale(1.05);
         }
         
-        .service-card h4 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
+        .service-card h3 {
+            font-size: 22px;
+            font-weight: bold;
             color: #333;
+            margin-bottom: 15px;
+            text-transform: uppercase;
         }
         
         .service-card p {
             color: #666;
-            line-height: 1.8;
+            line-height: 1.6;
         }
         
-        /* ========== CHAIRMAN MESSAGE SECTION STYLES ========== */
-        .chairman-section {
-            padding: 6rem 0;
-            background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+        /* Welcome Section - About section with image and text */
+        .welcome-section {
+            padding: 80px 0;
+            background: var(--light-bg);
         }
         
-        .chairman-image {
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        .welcome-image {
+            position: relative;
+        }
+        
+        .welcome-image img {
             width: 100%;
-            height: auto;
-            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
         
-        .chairman-content {
-            padding-left: 2rem;
+        .welcome-content h3 {
+            font-size: 16px;
+            color: var(--primary-green);
+            font-weight: bold;
+            margin-bottom: 10px;
         }
         
-        /* ========== FOOTER STYLES ========== */
-        .footer {
-            background: linear-gradient(135deg, #2d3436 0%, #000000 100%);
+        .welcome-content h2 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+        
+        .welcome-content p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            font-size: 16px;
+        }
+        
+        /* Products/Services Dark Section - Healthcare products showcase */
+        .products-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #1e5128 0%, #2d6a4f 100%);
             color: white;
-            padding: 4rem 0 2rem;
+            position: relative;
+        }
+        
+        .products-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1920&h=800&fit=crop') center/cover;
+            opacity: 0.1;
+        }
+        
+        .products-section .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .products-section h2,
+        .products-section h3 {
+            color: white;
+        }
+        
+        .products-section p {
+            color: rgba(255,255,255,0.9);
+        }
+        
+        .product-icon-card {
+            text-align: center;
+            padding: 30px;
+            transition: all 0.3s;
+        }
+        
+        .product-icon-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .product-icon-card i {
+            font-size: 60px;
+            color: var(--light-green);
+            margin-bottom: 20px;
+            transition: all 0.3s;
+        }
+        
+        .product-icon-card:hover i {
+            transform: scale(1.1);
+        }
+        
+        .product-icon-card h4 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: white;
+        }
+        
+        /* Team/Career Section - Career information section */
+        .team-section {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .team-content h3 {
+            font-size: 16px;
+            color: var(--primary-blue);
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .team-content h2 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+        
+        .team-content p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            font-size: 16px;
+        }
+        
+        .team-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        /* Chairman Section - Compact side-by-side layout */
+        .chairman-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        }
+        
+        .chairman-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.4s;
+        }
+        
+        .chairman-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .chairman-card .row {
+            align-items: stretch;
+        }
+        
+        .chairman-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            min-height: 350px;
+        }
+        
+        .chairman-card .content {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .chairman-card h4 {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+        }
+        
+        .chairman-card .position {
+            color: var(--primary-green);
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .chairman-card p {
+            color: #666;
+            line-height: 1.8;
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+        
+        /* Footer - Site footer with contact info */
+        .footer {
+            background: #1a1a2e;
+            color: white;
+            padding: 60px 0 20px;
         }
         
         .footer h5 {
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            font-size: 1.3rem;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: var(--light-green);
         }
         
-        .footer-links {
+        .footer ul {
             list-style: none;
             padding: 0;
         }
         
-        .footer-links li {
-            margin-bottom: 0.8rem;
+        .footer ul li {
+            margin-bottom: 10px;
         }
         
-        .footer-links a {
-            color: rgba(255,255,255,0.7);
+        .footer ul li a {
+            color: #ccc;
             text-decoration: none;
-            transition: color 0.3s ease;
+            transition: all 0.3s;
         }
         
-        .footer-links a:hover {
-            color: white;
+        .footer ul li a:hover {
+            color: var(--light-green);
+            padding-left: 5px;
         }
         
         .footer-contact p {
-            color: rgba(255,255,255,0.8);
-            margin-bottom: 1rem;
+            color: #ccc;
+            margin-bottom: 10px;
         }
         
         .footer-contact i {
-            margin-right: 0.5rem;
-            color: #667eea;
-        }
-        
-        /* Social icons in footer */
-        .footer-social {
-            margin-top: 2rem;
-        }
-        
-        .footer-social a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 50%;
-            color: white;
-            margin-right: 0.8rem;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
-        
-        .footer-social a:hover {
-            background: white;
-            color: #667eea;
-            transform: translateY(-3px);
+            margin-right: 10px;
+            color: var(--light-green);
         }
         
         .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,0.1);
-            margin-top: 3rem;
-            padding-top: 2rem;
+            border-top: 1px solid #333;
+            margin-top: 40px;
+            padding-top: 20px;
             text-align: center;
-            color: rgba(255,255,255,0.6);
+            color: #888;
         }
         
-        /* ========== RESPONSIVE STYLES ========== */
-        @media (max-width: 992px) {
-            .navbar-social {
-                margin-left: 0;
-                margin-top: 1rem;
-                justify-content: center;
+        /* Responsive Design - Mobile and tablet optimizations */
+        @media (max-width: 991px) {
+            .navbar-nav .nav-link {
+                margin: 5px 0;
             }
             
-            .navbar .container {
-                flex-direction: column;
+            .social-icons {
+                margin-top: 15px;
+                justify-content: center;
             }
         }
         
         @media (max-width: 768px) {
+            /* Carousel responsive */
+            .carousel-item {
+                height: 500px;
+            }
+            
             .carousel-caption h1 {
-                font-size: 2rem;
+                font-size: 32px;
             }
             
             .carousel-caption p {
-                font-size: 1rem;
+                font-size: 18px;
             }
             
-            .section-title {
-                font-size: 2rem;
+            .carousel-control-prev,
+            .carousel-control-next {
+                display: none;
             }
             
-            .hero-carousel {
-                margin-top: 56px;
+            /* Top bar responsive */
+            .top-bar-content {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
             }
             
-            .chairman-content {
-                padding-left: 0;
-                margin-top: 2rem;
+            .top-logo {
+                justify-content: center;
             }
             
-            .btn-get-started {
-                padding: 0.8rem 1.8rem;
-                font-size: 1rem;
+            .contact-info {
+                flex-direction: column;
+                gap: 15px;
+                width: 100%;
+            }
+            
+            .contact-item {
+                justify-content: center;
+            }
+            
+            /* Section titles */
+            .section-title h2 {
+                font-size: 28px;
+            }
+            
+            .welcome-content h2,
+            .team-content h2 {
+                font-size: 28px;
+            }
+            
+            /* Service cards */
+            .service-card {
+                margin-bottom: 20px;
+            }
+            
+            /* Chairman card responsive */
+            .chairman-card img {
+                min-height: 250px;
+                max-height: 300px;
+            }
+            
+            .chairman-card .content {
+                padding: 30px 20px;
+            }
+            
+            /* Spacing adjustments */
+            .what-we-do,
+            .welcome-section,
+            .products-section,
+            .team-section,
+            .chairman-section {
+                padding: 60px 0;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .carousel-item {
+                height: 450px;
+            }
+            
+            .carousel-caption h1 {
+                font-size: 26px;
+            }
+            
+            .carousel-caption p {
+                font-size: 16px;
+            }
+            
+            .btn-primary-custom {
+                padding: 12px 25px;
+                font-size: 14px;
+            }
+            
+            .service-card h3 {
+                font-size: 18px;
+            }
+            
+            .product-icon-card i {
+                font-size: 45px;
             }
         }
     </style>
 </head>
 <body>
-
-    <!-- ========== NAVIGATION / HEADER ========== -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    
+    <!-- Top Contact Bar -->
+    <div class="top-contact-bar">
         <div class="container">
-            <!-- Brand Logo (Left Side) -->
-            <a class="navbar-brand" href="#">INSPIRING GROUP</a>
-            
-            <!-- Mobile Toggle Button -->
+            <div class="top-bar-content">
+                <div class="top-logo">
+                    <img src="https://placehold.co/35x35/4CAF50/white?text=I" alt="Logo">
+                    <span>INSPIRING GROUP</span>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <strong>Call Us</strong><br>
+                            <span>+91-7536093608</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Email Us</strong><br>
+                            <span>info@inspiringgroup.in</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
-            <!-- Navigation Menu Items (Center) -->
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <!-- Home Menu -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                     
-                    <!-- About Us Menu with Dropdown -->
+                    <!-- About Us Dropdown -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="javascript:void(0);" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             About Us
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-                            <li><a class="dropdown-item" href="#">Group Overview</a></li>
-                            <li><a class="dropdown-item" href="#">Key Management</a></li>
-                            <li><a class="dropdown-item" href="#">Our Philosophy</a></li>
-                            <li><a class="dropdown-item" href="#">Our Policies</a></li>
+                            <li><a class="dropdown-item" href="https://inspiringgroup.in/group-overview.php">Group Overview</a></li>
+                            <li><a class="dropdown-item" href="https://inspiringgroup.in/key-management.php">Key Management</a></li>
+                            <li><a class="dropdown-item" href="https://inspiringgroup.in/our-philosophy.php">Our Philosophy</a></li>
+                            <li><a class="dropdown-item" href="https://inspiringgroup.in/our-policies.php">Our Policies</a></li>
                         </ul>
                     </li>
                     
-                    <!-- Group Companies Menu with Dropdown -->
+                    <!-- Group Companies Dropdown -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="companiesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="https://inspiringgroup.in/group-companies.php" id="companiesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Group Companies
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="companiesDropdown">
-                            <li><a class="dropdown-item" href="#">Inspiring Agro Limited</a></li>
-                            <li><a class="dropdown-item" href="#">Inspiring Projects Private Limited</a></li>
-                            <li><a class="dropdown-item" href="#">Navkem Healthcare Limited</a></li>
+                            <li><a class="dropdown-item" href="https://inspiringgroup.in/inspiring-agro-limited.php">Inspiring Agro Limited</a></li>
+                            <li><a class="dropdown-item" href="https://inspiringgroup.in/inspiring-projects-private-limited.php">Inspiring Projects Private Limited</a></li>
+                            <li><a class="dropdown-item" href="https://navkem.com/">Navkem Healthcare Limited</a></li>
                         </ul>
                     </li>
                     
-                    <!-- Careers Menu -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="#careers">Careers</a>
-                    </li>
-                    
-                    <!-- Contact Us Menu -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact Us</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#careers">Careers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
                 </ul>
-            </div>
-            
-            <!-- Social Icons in Navbar (Right Side) -->
-            <div class="navbar-social d-none d-lg-flex">
-                <a href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
-                <a href="#" title="Twitter"><i class="bi bi-twitter"></i></a>
-                <a href="#" title="Instagram"><i class="bi bi-instagram"></i></a>
-                <a href="#" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
             </div>
         </div>
     </nav>
-
-    <!-- ========== HERO SLIDER SECTION (WITH FADE ANIMATION) ========== -->
-    <div id="heroCarousel" class="carousel slide carousel-fade hero-carousel" data-bs-ride="carousel">
-        <!-- Slider Indicators -->
+    
+    <!-- Hero Carousel Section - Using Bootstrap Carousel for proper text centering -->
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
-            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
-            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
-            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         
-        <!-- Slider Items -->
         <div class="carousel-inner">
-            <!-- Slide 1 -->
             <div class="carousel-item active">
-                <img src="https://picsum.photos/1920/1080?random=1" class="d-block w-100" alt="Inspiring Group Slide 1">
                 <div class="carousel-caption">
-                    <h1>Inspiring Group is serving humankind since 2010 .</h1>
-                    <p>Story of success , growth and sustainable development .</p>
-                    <a href="#about" class="btn-get-started">Get Started</a>
+                    <h1 data-aos="fade-up" data-aos-duration="1000">Inspiring Group is <span class="highlight">serving humankind</span> since 2010</h1>
+                    <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Story of success, growth and sustainable development</p>
+                    <a href="#about" class="btn-primary-custom" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">Get Started</a>
                 </div>
             </div>
             
-            <!-- Slide 2 -->
             <div class="carousel-item">
-                <img src="https://picsum.photos/1920/1080?random=2" class="d-block w-100" alt="Inspiring Group Slide 2">
                 <div class="carousel-caption">
-                    <h1>Inspiring Group is serving humankind since 2010 .</h1>
-                    <p>Story of success , growth and sustainable development .</p>
-                    <a href="#about" class="btn-get-started">Get Started</a>
+                    <h1 data-aos="fade-up" data-aos-duration="1000">Building a <span class="highlight">Better Tomorrow</span> Together</h1>
+                    <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Innovation, Excellence, and Commitment to Quality</p>
+                    <a href="#about" class="btn-primary-custom" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">Learn More</a>
                 </div>
             </div>
             
-            <!-- Slide 3 -->
             <div class="carousel-item">
-                <img src="https://picsum.photos/1920/1080?random=3" class="d-block w-100" alt="Inspiring Group Slide 3">
                 <div class="carousel-caption">
-                    <h1>Inspiring Group is serving humankind since 2010 .</h1>
-                    <p>Story of success , growth and sustainable development .</p>
-                    <a href="#about" class="btn-get-started">Get Started</a>
+                    <h1 data-aos="fade-up" data-aos-duration="1000">Your <span class="highlight">Trusted Partner</span> in Progress</h1>
+                    <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Delivering quality solutions across multiple sectors</p>
+                    <a href="#contact" class="btn-primary-custom" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">Contact Us</a>
                 </div>
             </div>
         </div>
         
-        <!-- Slider Controls -->
         <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
         </button>
     </div>
-
-    <!-- ========== SECTION DIVIDER ========== -->
-    <div class="section-divider">
-        <span class="section-divider-icon"><i class="bi bi-star-fill"></i></span>
-    </div>
-
-    <!-- ========== ABOUT INSPIRING GROUP SECTION ========== -->
-    <section id="about" class="about-section">
+    
+      
+    <!-- Welcome/About Section -->
+    <section class="welcome-section" id="about">
         <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title">about INSPIRING GROUP</h2>
-            </div>
-            
             <div class="row align-items-center">
-                <!-- About Image -->
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <img src="https://picsum.photos/800/600?random=10" alt="Inspiring Group" class="about-image">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-once="false">
+                    <div class="welcome-image">
+                        <img src="https://placehold.co/600x500/2E5C8A/white?text=Laboratory+Research" alt="About">
+                    </div>
                 </div>
-                
-                <!-- About Content -->
-                <div class="col-lg-6">
-                    <p class="lead">Inspiring Group is serving humankind since 2010. Story of success , growth and sustainable development .</p>
-                    <a href="#" class="btn btn-modern mt-3">Read More</a>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-once="false">
+                    <div class="welcome-content">
+                        <h3>WELCOME TO INSPIRING GROUP</h3>
+                        <h2>Inspiring Group, by virtue of its entrepreneurial skills, innovative strategies and seamless execution</h2>
+                        <p>It is emerging as one of the fastest growing and leading private sector organization. Inspiring Group laid is an endeavor to provide best products and services to humanity at affordable prices.</p>
+                        <a href="#" class="btn-primary-custom">Read More</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ========== SECTION DIVIDER ========== -->
-    <div class="section-divider">
-        <span class="section-divider-icon"><i class="bi bi-heart-fill"></i></span>
-    </div>
-
-    <!-- ========== WHAT WE DO SECTION (WITH CARD IMAGES) ========== -->
-    <section class="what-we-do-section">
+     <!-- What We Do Section -->
+    <section class="what-we-do" id="companies">
         <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title">What We Do</h2>
+            <div class="section-title" data-aos="fade-up" data-aos-once="false">
+                <h2>What We Do</h2>
+                <div class="underline"></div>
             </div>
             
-            <div class="row">
-                <!-- Agro Card with Image -->
-                <div class="col-lg-6">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-once="false" data-aos-delay="100">
                     <div class="service-card">
-                        <img src="https://picsum.photos/800/500?random=11" alt="Agro" class="service-card-image">
-                        <div class="service-card-body">
-                            <h4>Agro</h4>
-                            <p>We are involved in production of Organic Food , Organic Fertilizer , Seeds , Dairy Products ,Honey , Poultry , Fish etc. that are affordable, seasonal, and as fresh & local as possible.</p>
-                        </div>
+                        <img src="https://placehold.co/400x300/8BC34A/white?text=Agro+Products" alt="Agro">
+                        <h3>Agro</h3>
+                        <p>We are manufacturer and supplier of Organic Food, Organic Fertilizer, Seeds, Dairy Products, Honey, Poultry, Fish etc that are pesticide, antibiotic and residue free & load up possibile</p>
                     </div>
                 </div>
                 
-                <!-- Engineering & Constructions Card with Image -->
-                <div class="col-lg-6">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-once="false" data-aos-delay="200">
                     <div class="service-card">
-                        <img src="https://picsum.photos/800/500?random=12" alt="Engineering & Constructions" class="service-card-image">
-                        <div class="service-card-body">
-                            <h4>Engineering & Constructions</h4>
-                            <p>We proudly represent ourselves as emerging EPC , O&M , Project Consultancy and Infrastructure company in the region.</p>
-                        </div>
+                        <img src="https://placehold.co/400x300/FF5722/white?text=Engineering" alt="Engineering">
+                        <h3>Engineering & Construction</h3>
+                        <p>We are providing services of Civil, Electrical, PHE, O&M, Project Consultancy and infrastructure in this region</p>
                     </div>
                 </div>
                 
-                <!-- Healthcare Card with Image -->
-                <div class="col-lg-6">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-once="false" data-aos-delay="300">
                     <div class="service-card">
-                        <img src="https://picsum.photos/800/500?random=13" alt="Healthcare" class="service-card-image">
-                        <div class="service-card-body">
-                            <h4>Healthcare</h4>
-                            <p>We are emerging as significant healthcare product & service provider in Eastern India.</p>
-                        </div>
+                        <img src="https://placehold.co/400x300/2196F3/white?text=Healthcare" alt="Healthcare">
+                        <h3>Healthcare</h3>
+                        <p>We are providing best healthcare product & services provider at Fusidic India</p>
                     </div>
                 </div>
                 
-                <!-- Social Work Card with Image -->
-                <div class="col-lg-6">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-once="false" data-aos-delay="400">
                     <div class="service-card">
-                        <img src="https://picsum.photos/800/500?random=14" alt="Social Work" class="service-card-image">
-                        <div class="service-card-body">
-                            <h4>Social Work</h4>
-                            <p>We at Inspiring Group, believes that charity always begins from home. Social responsibility is at our core and we are committed towards our goal of being s.</p>
-                        </div>
+                        <img src="https://placehold.co/400x300/9C27B0/white?text=Social+Work" alt="Social Work">
+                        <h3>Social Work</h3>
+                        <p>We at inspiring Group, missions and charity always begins from home. Social responsibility is all our core and all our committed activities in social responsible organization</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- ========== SECTION DIVIDER ========== -->
-    <div class="section-divider">
-        <span class="section-divider-icon"><i class="bi bi-gem"></i></span>
-    </div>
-
-    <!-- ========== CHAIRMAN'S MESSAGE SECTION ========== -->
+    
+    <!-- Products Dark Section -->
+    <section class="products-section">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up" data-aos-once="false">
+                <h2 style="color: white;">PRODUCTS</h2>
+                <div class="underline"></div>
+            </div>
+            
+            <div class="text-center mb-5" data-aos="fade-up" data-aos-once="false">
+                <h3>Our management is committed to provide best healthcare at affordable prices</h3>
+                <p class="mt-3">As an organization dealing with healthcare products is our utmost responsibility to cater best quality products to our consumers. Thus, our passion for quality goes beyond business and statutory requirements.</p>
+            </div>
+            
+            <div class="row g-4 mb-5">
+                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-once="false" data-aos-delay="100">
+                    <div class="product-icon-card">
+                        <i class="fas fa-microscope"></i>
+                        <h4>Discovery</h4>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-once="false" data-aos-delay="200">
+                    <div class="product-icon-card">
+                        <i class="fas fa-flask"></i>
+                        <h4>Development</h4>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-once="false" data-aos-delay="300">
+                    <div class="product-icon-card">
+                        <i class="fas fa-vial"></i>
+                        <h4>Analytical Service</h4>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-once="false" data-aos-delay="400">
+                    <div class="product-icon-card">
+                        <i class="fas fa-pills"></i>
+                        <h4>Drug Product</h4>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center" data-aos="fade-up" data-aos-once="false">
+                <a href="#" class="btn-primary-custom">Read More</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Team/Career Section -->
+    <section class="team-section" id="careers">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-once="false">
+                    <div class="team-content">
+                        <h3>WE ARE PROFESSIONALS!</h3>
+                        <h2>Experts In Field Medical. Ready to Join Our Team</h2>
+                        <p>At Inspiring Group, we recognize the critical role that our people play in the success and growth of each of our businesses. We understand that investment in and commitment to our employees is the key to our continued success as one of the fastest growing, best managed pharmaceutical companies in the country. Our corporate culture is focused on learning and growing.</p>
+                        <a href="#" class="btn-primary-custom">Work With Us</a>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-once="false">
+                    <div class="team-image">
+                        <img src="https://placehold.co/600x500/4CAF50/white?text=Medical+Team" alt="Team">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Chairman's Message -->
     <section class="chairman-section">
         <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title">Chairman's Message</h2>
+            <div class="section-title" data-aos="fade-up" data-aos-once="false">
+                <h2>Chairman's Message</h2>
+                <div class="underline"></div>
             </div>
             
-            <div class="row align-items-center">
-                <!-- Chairman Image -->
-                <div class="col-lg-4 text-center mb-4 mb-lg-0">
-                    <img src="https://i.pravatar.cc/400?img=12" alt="Chairman" class="chairman-image">
-                </div>
-                
-                <!-- Chairman Message Content -->
-                <div class="col-lg-8">
-                    <div class="chairman-content">
-                        <p class="lead">It gives me immense pleasure to welcome you to Inspiring Group , today we are progressing in the right path of development for the elevation of the human spirit to lead a healthy life . We at Inspiring Group , has ever strives to build on the core values of reaching out to millions of…</p>
-                        <a href="#" class="btn btn-modern mt-3">Read More</a>
+            <div class="chairman-card" data-aos="fade-up" data-aos-once="false">
+                <div class="row g-0">
+                    <div class="col-lg-5">
+                        <img src="https://placehold.co/500x400/2E5C8A/white?text=Chairman" alt="Chairman">
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="content">
+                            <h4>Message from the Chairman</h4>
+                            <span class="position">Chairman, Inspiring Group</span>
+                            <p>It gives me immense pleasure to welcome you to Inspiring Group - today we are progressing in the right path of development for the elevation of the Human spirit to lead a healthy life. We at Inspiring Group, has one etheos to build all the core values of reaching out to the millions of...</p>
+                            <a href="#" class="btn-primary-custom">Read More</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- ========== FOOTER SECTION (WITH SOCIAL ICONS) ========== -->
+    
+    <!-- Footer -->
     <footer class="footer" id="contact">
         <div class="container">
             <div class="row">
-                <!-- Contact Information Column -->
-                <div class="col-lg-4 mb-4 mb-lg-0">
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-once="false">
                     <h5>INSPIRING GROUP</h5>
-                    <div class="footer-contact mt-4">
-                        <p><strong>Contact Us</strong></p>
-                        <p><i class="bi bi-geo-alt-fill"></i>Ambika Towers 2 G. G Road , Belurmath Howrah-711202</p>
-                        <p><i class="bi bi-telephone-fill"></i>+917520006565</p>
-                        <p><i class="bi bi-envelope-fill"></i>info@inspiringgroup.in</p>
-                    </div>
-                    
-                    <!-- Social Icons in Footer -->
-                    <div class="footer-social">
-                        <a href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
-                        <a href="#" title="Twitter"><i class="bi bi-twitter"></i></a>
-                        <a href="#" title="Instagram"><i class="bi bi-instagram"></i></a>
-                        <a href="#" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                        <a href="#" title="YouTube"><i class="bi bi-youtube"></i></a>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> Ambika Towers 2 G, R Road,<br>
+                        Azimganj Howrah-711202</p>
+                        <p><i class="fas fa-phone"></i> +917536093608</p>
+                        <p><i class="fas fa-envelope"></i> info@inspiringgroup.in</p>
                     </div>
                 </div>
                 
-                <!-- About Us Links Column -->
-                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                <div class="col-lg-2 col-md-6 mb-4" data-aos="fade-up" data-aos-once="false" data-aos-delay="100">
                     <h5>About Us</h5>
-                    <ul class="footer-links">
+                    <ul>
                         <li><a href="#">Group Overview</a></li>
                         <li><a href="#">Key Management</a></li>
-                        <li><a href="#">Our Philosophy</a></li>
+                        <li><a href="#">Vision & Mission</a></li>
                         <li><a href="#">Our Policies</a></li>
                     </ul>
                 </div>
                 
-                <!-- Group Companies Links Column -->
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-once="false" data-aos-delay="200">
                     <h5>Group Companies</h5>
-                    <ul class="footer-links">
+                    <ul>
                         <li><a href="#">Inspiring Agro Limited</a></li>
-                        <li><a href="#">Inspiring Projects Private Limited</a></li>
+                        <li><a href="#">Inspiring Projects Limited</a></li>
                         <li><a href="#">Navkem Healthcare Limited</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-once="false" data-aos-delay="300">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                        <li><a href="#">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
             
-            <!-- Footer Bottom -->
             <div class="footer-bottom">
-                <p>&copy; 2025 Inspiring Group. All rights reserved.</p>
+                <p>&copy; 2025 Inspiring Group. All Rights Reserved</p>
             </div>
         </div>
     </footer>
-
-    <!-- ========== BOOTSTRAP JS ========== -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     
-    <!-- ========== CUSTOM JAVASCRIPT ========== -->
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
     <script>
-        // Smooth scrolling for navigation links
+        // Initialize AOS with animations on every scroll (both up and down)
+        AOS.init({
+            duration: 1000,
+            once: false, // Animation triggers every time element scrolls into view
+            offset: 100,
+            mirror: true // Animates elements when scrolling past them (both directions)
+        });
+        
+        // Smooth scroll for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -753,21 +1112,15 @@
                 }
             });
         });
-
-        // Navbar background enhancement on scroll
+        
+        // Navbar shadow on scroll
         window.addEventListener('scroll', function() {
             const navbar = document.querySelector('.navbar');
             if (window.scrollY > 50) {
-                navbar.style.boxShadow = '0 4px 30px rgba(0,0,0,0.15)';
+                navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
             } else {
-                navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+                navbar.style.boxShadow = 'none';
             }
-        });
-
-        // Auto-play carousel with fade animation
-        const carousel = new bootstrap.Carousel(document.getElementById('heroCarousel'), {
-            interval: 5000,
-            ride: 'carousel'
         });
     </script>
 </body>
