@@ -212,12 +212,13 @@ body {
 }
 
 .carousel-item:nth-child(2) {
-       background-image: url('../images/slider-img.png');
+    background-image: url('../images/slider-img.png');
 }
 
 .carousel-item:nth-child(3) {
-     background-image: url('../images/slider-img.png');
+    background-image: url('../images/slider-img.png');
 }
+
 /* .carousel-item:nth-child(1) {
     background-image: url('https://images.unsplash.com/photo-1560493676-04071c5f467b?w=1920&h=600&fit=crop');
 }
@@ -326,12 +327,13 @@ body {
 /* What We Do Section - Service cards with hover effects */
 .what-we-do {
     padding: 80px 0;
-    background: linear-gradient(135deg, #1e5128 0%, #2d6a4f 100%);
-    color: white;
+    /* background: linear-gradient(135deg, #c6cfc8 0%, #818181 100%); */
+    background: linear-gradient(135deg, #ededed 0%, #35694b4f 100%);
+    color: rgb(0, 0, 0);
     position: relative;
 }
 
-.what-we-do::before {
+/* .what-we-do::before {
     content: '';
     position: absolute;
     top: 0;
@@ -340,7 +342,7 @@ body {
     bottom: 0;
     background: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&h=800&fit=crop') center/cover;
     opacity: 0.1;
-}
+} */
 
 .what-we-do .container {
     position: relative;
@@ -582,6 +584,7 @@ body {
 }
 
 /* Footer - Site footer with contact info */
+/* Footer - Site footer with contact info and social media */
 .footer {
     background: #1a1a2e;
     color: white;
@@ -592,8 +595,7 @@ body {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 20px;
-    /* color: var(--light-green); */
-    color: var(--primary-blue);
+    color: #2E5C8A;
 }
 
 .footer ul {
@@ -612,8 +614,7 @@ body {
 }
 
 .footer ul li a:hover {
-    /* color: var(--light-green); */
-    color: var(--primary-blue);
+    color: #2E5C8A;
     padding-left: 5px;
 }
 
@@ -624,8 +625,36 @@ body {
 
 .footer-contact i {
     margin-right: 10px;
-    /* color: var(--light-green); */
-    color: var(--primary-blue);
+    color: #2E5C8A;
+}
+
+/* Social Media Icons in Footer */
+.footer-social {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-social a {
+    width: 40px;
+    height: 40px;
+    background: rgba(46, 92, 138, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2E5C8A;
+    font-size: 18px;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.footer-social a:hover {
+    background: #2E5C8A;
+    color: white;
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 5px 15px rgba(46, 92, 138, 0.4);
 }
 
 .footer-bottom {
@@ -635,6 +664,14 @@ body {
     text-align: center;
     color: #888;
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-social {
+        justify-content: center;
+    }
+}
+
 .map-section {
     padding: 0;
     background: #f8f9fa;
@@ -772,3 +809,506 @@ body {
         font-size: 45px;
     }
 }
+/* Page Content Section */
+.page-content-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+    min-height: 60vh;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.page-subtitle {
+    font-size: 14px;
+    font-weight: 600;
+    color: #f27735;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.page-header h1 {
+    font-size: 42px;
+    font-weight: bold;
+    color: #2E5C8A;
+    margin-bottom: 15px;
+}
+
+.page-underline {
+    width: 80px;
+    height: 4px;
+    background: #f27735;
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+.content-box {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 45px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.content-box p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.content-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .page-content-section {
+        padding: 60px 0;
+    }
+
+    .page-header h1 {
+        font-size: 32px;
+    }
+
+    .content-box {
+        padding: 30px 20px;
+    }
+
+    .content-box p {
+        font-size: 15px;
+    }
+}
+/* Page Content Section */
+.page-content-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+    min-height: 60vh;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.page-subtitle {
+    font-size: 14px;
+    font-weight: 600;
+    color: #f27735;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.page-header h1 {
+    font-size: 42px;
+    font-weight: bold;
+    color: #2E5C8A;
+    margin-bottom: 15px;
+}
+
+.page-underline {
+    width: 80px;
+    height: 4px;
+    background: #f27735;
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+/* Philosophy Cards */
+.philosophy-card {
+    background: white;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s;
+}
+
+.philosophy-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    transform: translateY(-3px);
+}
+
+.philosophy-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f8f9fa;
+}
+
+.philosophy-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.philosophy-icon.vision {
+    background: rgba(46, 92, 138, 0.1);
+}
+
+.philosophy-icon.mission {
+    background: rgba(242, 119, 53, 0.1);
+}
+
+.philosophy-icon.values {
+    background: rgba(76, 175, 80, 0.1);
+}
+
+.philosophy-icon.vision i {
+    color: #2E5C8A;
+    font-size: 24px;
+}
+
+.philosophy-icon.mission i {
+    color: #f27735;
+    font-size: 24px;
+}
+
+.philosophy-icon.values i {
+    color: #4CAF50;
+    font-size: 24px;
+}
+
+.philosophy-card h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2E5C8A;
+    margin: 0;
+}
+
+.philosophy-card p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.philosophy-card p:last-child {
+    margin-bottom: 0;
+}
+
+/* Philosophy List */
+.philosophy-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.philosophy-list li {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.philosophy-list li:last-child {
+    margin-bottom: 0;
+}
+
+.philosophy-list li::before {
+    content: '•';
+    position: absolute;
+    left: 8px;
+    color: #f27735;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .page-content-section {
+        padding: 60px 0;
+    }
+
+    .page-header h1 {
+        font-size: 32px;
+    }
+
+    .philosophy-card {
+        padding: 25px 20px;
+    }
+
+    .philosophy-header {
+        gap: 15px;
+    }
+
+    .philosophy-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .philosophy-icon i {
+        font-size: 20px;
+    }
+
+    .philosophy-card h3 {
+        font-size: 20px;
+    }
+
+    .philosophy-card p,
+    .philosophy-list li {
+        font-size: 15px;
+    }
+}
+/* ------------plicy ----------------- */
+/* Page Content Section */
+.page-content-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+    min-height: 60vh;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.page-subtitle {
+    font-size: 14px;
+    font-weight: 600;
+    color: #f27735;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.page-header h1 {
+    font-size: 42px;
+    font-weight: bold;
+    color: #2E5C8A;
+    margin-bottom: 15px;
+}
+
+.page-underline {
+    width: 80px;
+    height: 4px;
+    background: #f27735;
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+/* Policy Intro */
+.policy-intro {
+    max-width: 900px;
+    margin: 0 auto 40px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.policy-intro p {
+    color: #555;
+    font-size: 17px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* Policy Cards */
+.policy-card {
+    background: white;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s;
+}
+
+.policy-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    transform: translateY(-3px);
+}
+
+.policy-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f8f9fa;
+}
+
+.policy-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.policy-icon.env {
+    background: rgba(76, 175, 80, 0.1);
+}
+
+.policy-icon.safety {
+    background: rgba(46, 92, 138, 0.1);
+}
+
+.policy-icon.quality {
+    background: rgba(242, 119, 53, 0.1);
+}
+
+.policy-icon.tpm {
+    background: rgba(76, 175, 80, 0.1);
+}
+
+.policy-icon.csr {
+    background: rgba(46, 92, 138, 0.1);
+}
+
+.policy-icon.energy {
+    background: rgba(242, 119, 53, 0.1);
+}
+
+.policy-icon.env i {
+    color: #4CAF50;
+    font-size: 24px;
+}
+
+.policy-icon.safety i {
+    color: #2E5C8A;
+    font-size: 24px;
+}
+
+.policy-icon.quality i {
+    color: #f27735;
+    font-size: 24px;
+}
+
+.policy-icon.tpm i {
+    color: #4CAF50;
+    font-size: 24px;
+}
+
+.policy-icon.csr i {
+    color: #2E5C8A;
+    font-size: 24px;
+}
+
+.policy-icon.energy i {
+    color: #f27735;
+    font-size: 24px;
+}
+
+.policy-card h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2E5C8A;
+    margin: 0;
+}
+
+.policy-card h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2E5C8A;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.policy-card p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.policy-card p:last-child {
+    margin-bottom: 0;
+}
+
+/* Policy List */
+.policy-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.policy-list li {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.policy-list li:last-child {
+    margin-bottom: 0;
+}
+
+.policy-list li::before {
+    content: '•';
+    position: absolute;
+    left: 8px;
+    color: #f27735;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .page-content-section {
+        padding: 60px 0;
+    }
+
+    .page-header h1 {
+        font-size: 32px;
+    }
+
+    .policy-intro {
+        padding: 25px 20px;
+    }
+
+    .policy-intro p {
+        font-size: 15px;
+    }
+
+    .policy-card {
+        padding: 25px 20px;
+    }
+
+    .policy-header {
+        gap: 15px;
+    }
+
+    .policy-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .policy-icon i {
+        font-size: 20px;
+    }
+
+    .policy-card h3 {
+        font-size: 20px;
+    }
+
+    .policy-card h4 {
+        font-size: 17px;
+    }
+
+    .policy-card p,
+    .policy-list li {
+        font-size: 15px;
+    }
+}
+/* ------------plicy ----------------- */
