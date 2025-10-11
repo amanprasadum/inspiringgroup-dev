@@ -1593,3 +1593,95 @@ body {
         font-size: 15px;
     }
 }
+/* Key Management Section */
+.key-management-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+    min-height: 60vh;
+}
+
+.key-management-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.key-management-header h1 {
+    font-size: 42px;
+    font-weight: bold;
+    color: #2E5C8A;
+    margin-bottom: 15px;
+}
+
+/* Management Card */
+.management-card {
+    max-width: 900px;
+    margin: 0 auto 50px;
+    background: white;
+    padding: 45px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.management-card:last-child {
+    margin-bottom: 0;
+}
+
+.management-image {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.management-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.management-card h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2E5C8A;
+    margin-bottom: 20px;
+}
+
+.management-card p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: justify;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .key-management-section {
+        padding: 60px 0;
+    }
+
+    .key-management-header h1 {
+        font-size: 32px;
+    }
+
+    .management-card {
+        padding: 30px 20px;
+        margin-bottom: 30px;
+    }
+
+    .management-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .management-card h3 {
+        font-size: 20px;
+    }
+
+    .management-card p {
+        font-size: 15px;
+    }
+}
