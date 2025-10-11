@@ -1311,4 +1311,177 @@ body {
         font-size: 15px;
     }
 }
-/* ------------plicy ----------------- */
+/* ------------plicy end----------------- */
+
+/* Page Content Section */
+.page-content-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+    min-height: 60vh;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.page-subtitle {
+    font-size: 14px;
+    font-weight: 600;
+    color: #f27735;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.page-header h1 {
+    font-size: 42px;
+    font-weight: bold;
+    color: #2E5C8A;
+    margin-bottom: 15px;
+}
+
+.page-underline {
+    width: 80px;
+    height: 4px;
+    background: #f27735;
+    margin: 0 auto;
+    border-radius: 2px;
+    margin-bottom: 15px;
+}
+
+.page-description {
+    font-size: 18px;
+    color: #666;
+    margin: 0;
+}
+
+/* Contact Cards */
+.contact-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: all 0.3s;
+    height: 100%;
+}
+
+.contact-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    transform: translateY(-5px);
+}
+
+.contact-icon {
+    width: 70px;
+    height: 70px;
+    background: rgba(46, 92, 138, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    transition: all 0.3s;
+}
+
+.contact-card:hover .contact-icon {
+    background: #2E5C8A;
+}
+
+.contact-icon i {
+    font-size: 28px;
+    color: #2E5C8A;
+    transition: all 0.3s;
+}
+
+.contact-card:hover .contact-icon i {
+    color: white;
+}
+
+.contact-card h4 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2E5C8A;
+    margin-bottom: 15px;
+}
+
+.contact-card p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.contact-card a {
+    color: #555;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.contact-card a:hover {
+    color: #f27735;
+}
+
+/* Company Name */
+.company-name {
+    text-align: center;
+    margin-top: 50px;
+    padding: 40px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.company-name h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #2E5C8A;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .page-content-section {
+        padding: 60px 0;
+    }
+
+    .page-header h1 {
+        font-size: 32px;
+    }
+
+    .page-description {
+        font-size: 16px;
+    }
+
+    .contact-card {
+        padding: 30px 20px;
+        margin-bottom: 20px;
+    }
+
+    .contact-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .contact-icon i {
+        font-size: 24px;
+    }
+
+    .contact-card h4 {
+        font-size: 18px;
+    }
+
+    .contact-card p {
+        font-size: 15px;
+    }
+
+    .company-name {
+        padding: 30px 20px;
+        margin-top: 30px;
+    }
+
+    .company-name h2 {
+        font-size: 28px;
+    }
+}
