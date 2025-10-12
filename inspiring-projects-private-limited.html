@@ -46,7 +46,7 @@
     </div>
 
     <!-- Navigation -->
-     <nav class="navbar navbar-expand-lg navbar-dark">
+   <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -101,36 +101,92 @@
         </div>
     </nav>
 
-    <!-- Group Overview Section -->
-    <section class="page-content-section">
+    <!-- Hero Carousel Section - Using Bootstrap Carousel for proper text centering -->
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item">
+                <div class="carousel-caption">
+                    <h1 data-aos="fade-up" data-aos-duration="1000">Inspiring Group is <span class="highlight">serving
+                            humankind</span> since 2010</h1>
+                    <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Story of success, growth and
+                        sustainable development</p>
+                   
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-caption">
+                    <h1 data-aos="fade-up" data-aos-duration="1000">Inspiring Group is <span class="highlight">serving
+                            humankind</span> since 2010</h1>
+                    <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Story of success, growth and
+                        sustainable development</p>
+                    
+                </div>
+            </div>
+            <div class="carousel-item active">
+                <div class="carousel-caption">
+                    <h1 data-aos="fade-up" data-aos-duration="1000">Inspiring Group is <span class="highlight">serving
+                            humankind</span> since 2010</h1>
+                    <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Story of success, growth and
+                        sustainable development</p>
+                   
+                </div>
+            </div>
+
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Inspiring Projects Private Limited Section -->
+    <section class="ippl-page-section">
         <div class="container">
-            <div class="page-header" data-aos="fade-up">
-                <span class="page-subtitle">About Us</span>
-                <h1>Group Overview</h1>
-                <div class="page-underline"></div>
+
+            <!-- Main Intro -->
+            <div class="ippl-intro-box">
+                <h2>Inspiring Projects Private Limited</h2>
+                <p>Inspiring Projects Private Limited ( IPPL) incorporated under the company's act 1956 , is fast
+                    developing company under Inspiring Group of Companies . Inspiring Projects Private Limited by virtue
+                    of its entrepreneurial skills , innovative strategies and seamless execution , is emerging as one of
+                    the fastest growing and leading private sector organization . IPPL is a professionally managed
+                    organization and takes immense pride in its highly committed, dedicated and dynamic workforce who is
+                    all set to chart out new avenues by converting their Dreams into Reality.</p>
+
+                <p>The Company is involved in consultancy , advisory work of the infrastructure project , construction ,
+                    designing, implementation , commissioning, operation and maintenance of infrastructure projects in
+                    any sectors, schemes, facilities, programmes across sectors.</p>
             </div>
 
-            <div class="content-box" data-aos="fade-up" data-aos-delay="100">
-                <p>Inspiring Group endeavors to strengthen our country's industrial base by aiding infrastructural
-                    development , through sustainable development approaches and inclusive growth . It deploys its
-                    resources to improve infrastructure , education , health , water , sanitation , environment and so
-                    on in the areas it operates in.</p>
-
-                <p>Alongside contributing to India's growth story the group is driving an ambitious expansion plan with
-                    its sights set on emerging as a leading transnational business group . The company continues to
-                    capitalize on opportunities in high growth markets , expanding its core areas and diversifying into
-                    new businesses.</p>
-
-                <p>Inspiring Group endeavors to strengthen our country's industrial base by aiding infrastructural
-                    development , through sustainable development approaches and inclusive growth . It deploys its
-                    resources to improve infrastructure , education , health , water , sanitation , environment and so
-                    on in the areas it operates in . Growth has been a way of life for the Group and its motto all along
-                    has been 'growth with a social conscience '. At the heart of the group strategy is its commitment to
-                    sustainable development and it aspires to be a benchmark in this area for players in the industry
-                    the world over.</p>
+            <!-- Milestones -->
+            <div class="ippl-milestones">
+                <h3>Milestones;</h3>
+                <ul>
+                    <li>We proudly represent ourselves as emerging EPC company in the region.</li>
+                    <li>We are involved in Operation and Maintenance of Power & Steel Plant .</li>
+                    <li>We have a expert team for Mining and Logistics Handling .</li>
+                    <li>We are actively involved in several Road Projects .</li>
+                    <li>IPPL is registered contractor of various govt institutions/ companies.</li>
+                </ul>
             </div>
+
         </div>
     </section>
+
+
 
     <!-- Footer -->
     <footer class="footer" id="contact">

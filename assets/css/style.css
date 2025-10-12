@@ -412,6 +412,7 @@ body {
     color: var(--primary-green);
     font-weight: bold;
     margin-bottom: 10px;
+    margin-top: 30px;
 }
 
 .welcome-content h2 {
@@ -765,6 +766,7 @@ body {
 
     /* Chairman card responsive */
     .chairman-card img {
+        width: 100%;
         min-height: 250px;
         max-height: 300px;
     }
@@ -1682,6 +1684,297 @@ body {
     }
 
     .management-card p {
+        font-size: 15px;
+    }
+}
+/* Agro Page Section */
+.agro-page-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+/* Intro Box */
+.agro-intro-box {
+    max-width: 900px;
+    margin: 0 auto 50px;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.agro-intro-box h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #2E5C8A;
+    margin-bottom: 20px;
+}
+
+.agro-intro-box p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: justify;
+    margin: 0;
+}
+
+/* Agro Cards */
+.agro-card {
+    max-width: 900px;
+    margin: 0 auto 40px;
+    background: white;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s;
+}
+
+.agro-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    transform: translateY(-3px);
+}
+
+.agro-card-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f8f9fa;
+}
+
+.agro-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.agro-icon.fish {
+    background: rgba(46, 92, 138, 0.1);
+}
+
+.agro-icon.bee {
+    background: rgba(242, 119, 53, 0.1);
+}
+
+.agro-icon.poultry {
+    background: rgba(76, 175, 80, 0.1);
+}
+
+.agro-icon.power {
+    background: rgba(46, 92, 138, 0.1);
+}
+
+.agro-icon.fish i {
+    color: #2E5C8A;
+    font-size: 24px;
+}
+
+.agro-icon.bee i {
+    color: #f27735;
+    font-size: 24px;
+}
+
+.agro-icon.poultry i {
+    color: #4CAF50;
+    font-size: 24px;
+}
+
+.agro-icon.power i {
+    color: #2E5C8A;
+    font-size: 24px;
+}
+
+.agro-card h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2E5C8A;
+    margin: 0;
+}
+
+.agro-card p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: justify;
+    margin: 0;
+}
+
+/* Projects Section */
+.agro-projects {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.agro-projects h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2E5C8A;
+    margin-bottom: 20px;
+}
+
+.agro-projects ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.agro-projects ul li {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.agro-projects ul li:last-child {
+    margin-bottom: 0;
+}
+
+.agro-projects ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #4CAF50;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .agro-page-section {
+        padding: 60px 0;
+    }
+
+    .agro-intro-box,
+    .agro-card,
+    .agro-projects {
+        padding: 25px 20px;
+        margin-bottom: 30px;
+    }
+
+    .agro-intro-box h2,
+    .agro-card h3,
+    .agro-projects h3 {
+        font-size: 22px;
+    }
+
+    .agro-intro-box p,
+    .agro-card p,
+    .agro-projects ul li {
+        font-size: 15px;
+    }
+}
+/* IPPL Page Section */
+.ippl-page-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+/* Intro Box */
+.ippl-intro-box {
+    max-width: 900px;
+    margin: 0 auto 50px;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.ippl-intro-box h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #2E5C8A;
+    margin-bottom: 20px;
+}
+
+.ippl-intro-box p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.ippl-intro-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* Milestones Section */
+.ippl-milestones {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.ippl-milestones h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2E5C8A;
+    margin-bottom: 20px;
+}
+
+.ippl-milestones ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ippl-milestones ul li {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.ippl-milestones ul li:last-child {
+    margin-bottom: 0;
+}
+
+.ippl-milestones ul li::before {
+    content: '•';
+    position: absolute;
+    left: 8px;
+    color: #f27735;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .ippl-page-section {
+        padding: 60px 0;
+    }
+
+    .ippl-intro-box,
+    .ippl-milestones {
+        padding: 25px 20px;
+        margin-bottom: 30px;
+    }
+
+    .ippl-intro-box h2,
+    .ippl-milestones h3 {
+        font-size: 22px;
+    }
+
+    .ippl-intro-box p,
+    .ippl-milestones ul li {
         font-size: 15px;
     }
 }
