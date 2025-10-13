@@ -675,6 +675,7 @@ body {
 }
 
 .map-section {
+    margin-bottom: 15px;
     padding: 0;
     background: #f8f9fa;
 }
@@ -813,6 +814,7 @@ body {
         font-size: 45px;
     }
 }
+
 /* Page Content Section */
 .page-content-section {
     padding: 80px 0;
@@ -889,6 +891,7 @@ body {
         font-size: 15px;
     }
 }
+
 /* Page Content Section */
 .page-content-section {
     padding: 80px 0;
@@ -1069,6 +1072,7 @@ body {
         font-size: 15px;
     }
 }
+
 /* ------------plicy ----------------- */
 /* Page Content Section */
 .page-content-section {
@@ -1315,6 +1319,7 @@ body {
         font-size: 15px;
     }
 }
+
 /* ------------plicy end----------------- */
 
 /* Page Content Section */
@@ -1489,6 +1494,7 @@ body {
         font-size: 28px;
     }
 }
+
 /* Career Page Section */
 .career-page-section {
     padding: 80px 0;
@@ -1597,6 +1603,7 @@ body {
         font-size: 15px;
     }
 }
+
 /* Key Management Section */
 .key-management-section {
     padding: 80px 0;
@@ -1689,6 +1696,7 @@ body {
         font-size: 15px;
     }
 }
+
 /* Agro Page Section */
 .agro-page-section {
     padding: 80px 0;
@@ -1877,6 +1885,7 @@ body {
         font-size: 15px;
     }
 }
+
 /* IPPL Page Section */
 .ippl-page-section {
     padding: 80px 0;
@@ -1980,6 +1989,7 @@ body {
         font-size: 15px;
     }
 }
+
 /* canvas header start */
 /* ========================================
    OFF-CANVAS MOBILE HEADER - IMPROVED CSS CODE
@@ -2270,7 +2280,7 @@ body {
     .mobile-header-bar {
         display: block;
     }
-    
+
     /* Hide desktop top bar and navigation */
     .top-contact-bar,
     .navbar {
@@ -2294,4 +2304,5 @@ body {
 .offcanvas-backdrop {
     background-color: rgba(0, 0, 0, 0.5);
 }
+
 /* canvas header end */
