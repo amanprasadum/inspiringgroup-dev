@@ -669,7 +669,8 @@ body {
 /* Responsive */
 @media (max-width: 768px) {
     .footer-social {
-        justify-content: center;
+        justify-content: left;
+        /* justify-content: center; */
     }
 }
 
@@ -768,8 +769,8 @@ body {
     /* Chairman card responsive */
     .chairman-card img {
         width: 100%;
-        min-height: 250px;
-        max-height: 300px;
+        /* min-height: 250px;
+        max-height: 300px; */
     }
 
     .chairman-card .content {
@@ -1979,3 +1980,318 @@ body {
         font-size: 15px;
     }
 }
+/* canvas header start */
+/* ========================================
+   OFF-CANVAS MOBILE HEADER - IMPROVED CSS CODE
+   Copy ALL of this code to the END of your assets/css/style.css file
+   ======================================== */
+
+/* Mobile Header Bar - Only visible on mobile */
+.mobile-header-bar {
+    display: none;
+    background: #2E5C8A;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1040;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.mobile-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-menu-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 8px;
+    transition: all 0.3s;
+}
+
+.mobile-menu-btn:hover {
+    color: #f27735;
+}
+
+.mobile-logo img {
+    height: 45px;
+    width: auto;
+}
+
+.mobile-call-btn {
+    background: #f27735;
+    color: white;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.mobile-call-btn:hover {
+    background: #4CAF50;
+    transform: scale(1.05);
+    color: white;
+}
+
+/* Off-canvas Menu Styling */
+.offcanvas {
+    /* width: 280px !important; */
+}
+
+.offcanvas-header {
+    background: white;
+    padding: 20px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.offcanvas-logo {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.offcanvas-logo img {
+    height: 80px;
+    width: auto;
+}
+
+.offcanvas .btn-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    /* background: #f0f0f0; */
+    opacity: 1;
+    border-radius: 50%;
+    filter: none;
+    width: 32px;
+    height: 32px;
+}
+
+.offcanvas .btn-close:hover {
+    background: #2E5C8A;
+}
+
+.offcanvas-body {
+    padding: 0;
+    background: #ffffff;
+}
+
+/* Mobile Navigation Item (without dropdown) */
+.mobile-nav-item {
+    border-bottom: 1px solid #f0f0f0;
+    background: white;
+}
+
+.mobile-nav-link {
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    transition: all 0.3s;
+}
+
+.mobile-nav-link i {
+    margin-right: 12px;
+    color: #2E5C8A;
+    width: 20px;
+    font-size: 16px;
+}
+
+.mobile-nav-link:hover {
+    background: #f8f9fa;
+    color: #2E5C8A;
+    padding-left: 25px;
+}
+
+.mobile-nav-link:hover i {
+    color: #f27735;
+}
+
+/* Bootstrap Accordion Customization */
+.accordion-flush .accordion-item {
+    border-bottom: 1px solid #f0f0f0;
+    background: white;
+}
+
+.accordion-flush .accordion-item:first-child,
+.accordion-flush .accordion-item:last-child {
+    border-radius: 0;
+}
+
+.accordion-button {
+    padding: 14px 20px;
+    font-weight: 500;
+    font-size: 15px;
+    color: #333;
+    background: white;
+    border: none;
+    box-shadow: none !important;
+}
+
+.accordion-button i {
+    margin-right: 12px;
+    color: #2E5C8A;
+    width: 20px;
+    font-size: 16px;
+}
+
+.accordion-button:not(.collapsed) {
+    background: #f8f9fa;
+    color: #2E5C8A;
+}
+
+.accordion-button:not(.collapsed) i {
+    color: #f27735;
+}
+
+.accordion-button::after {
+    margin-left: auto;
+    width: 1rem;
+    height: 1rem;
+    background-size: 1rem;
+}
+
+.accordion-button:hover {
+    background: #f8f9fa;
+}
+
+.accordion-button:not(.collapsed):hover {
+    background: #f0f0f0;
+}
+
+.accordion-body {
+    padding: 0;
+    background: #fafafa;
+}
+
+/* Submenu Links */
+.submenu-link {
+    display: block;
+    padding: 11px 20px 11px 52px;
+    color: #555;
+    text-decoration: none;
+    font-size: 14px;
+    border-left: 3px solid transparent;
+    transition: all 0.3s;
+    background: #fafafa;
+}
+
+.submenu-link:hover {
+    background: white;
+    color: #2E5C8A;
+    border-left-color: #f27735;
+    padding-left: 54px;
+}
+
+/* Off-canvas Contact Section */
+.offcanvas-contact {
+    padding: 20px;
+    background: #f8f9fa;
+    margin-top: 15px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.offcanvas-contact h6 {
+    color: #2E5C8A;
+    font-weight: 600;
+    margin-bottom: 12px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.offcanvas-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+.offcanvas-contact-item i {
+    color: #f27735;
+    font-size: 14px;
+    width: 18px;
+}
+
+.offcanvas-contact-item a {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s;
+    word-break: break-word;
+}
+
+.offcanvas-contact-item a:hover {
+    color: #2E5C8A;
+}
+
+/* Off-canvas Social Icons */
+.offcanvas-social {
+    display: flex;
+    gap: 10px;
+    padding: 15px 20px 20px;
+    justify-content: center;
+    background: #f8f9fa;
+}
+
+.offcanvas-social a {
+    width: 36px;
+    height: 36px;
+    background: #2E5C8A;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.offcanvas-social a:hover {
+    background: #f27735;
+    transform: translateY(-2px);
+    color: white;
+}
+
+/* Hide desktop navigation on mobile, show mobile header */
+@media (max-width: 991px) {
+    .mobile-header-bar {
+        display: block;
+    }
+    
+    /* Hide desktop top bar and navigation */
+    .top-contact-bar,
+    .navbar {
+        display: none !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .mobile-header-bar {
+        display: none !important;
+    }
+}
+
+/* Smooth scrolling for iOS */
+.offcanvas-body {
+    -webkit-overflow-scrolling: touch;
+    overflow-y: auto;
+}
+
+/* Fix for offcanvas backdrop */
+.offcanvas-backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+/* canvas header end */
