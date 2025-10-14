@@ -1,4 +1,10 @@
 
+AOS.init({
+    duration: 1000,
+    once: false,
+    offset: 100,
+    mirror: true
+});
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
