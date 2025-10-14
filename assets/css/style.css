@@ -1696,7 +1696,8 @@ body {
 /* Key Management Section */
 .key-management-section {
     padding: 80px 0;
-    background: #f8f9fa;
+    /* background: #f8f9fa; */
+    background: #e7ebe8;
     min-height: 60vh;
 }
 
