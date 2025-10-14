@@ -605,7 +605,8 @@ body {
 /* Light Footer CSS  */
 
 .footer {
-    background: #f8f9fa; /* Light background */
+    /*background: #f8f9fa;*/ /* Light background */
+    background: #f8f9fa;
     color: #333; /* Dark text */
     padding: 60px 0 20px;
     border-top: 3px solid #2E5C8A; /* Top border for definition */
