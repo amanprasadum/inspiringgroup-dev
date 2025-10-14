@@ -1980,7 +1980,8 @@ body {
 /* IPPL Page Section */
 .ippl-page-section {
     padding: 80px 0;
-    background: #f8f9fa;
+    /* background: #f8f9fa; */
+    background: #e7ebe8;
 }
 
 /* Intro Box */
