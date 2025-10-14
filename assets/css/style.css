@@ -147,7 +147,7 @@ body {
     transform: translateY(-3px);
 }
 
-/* Bootstrap Carousel Hero Section - Using Bootstrap Carousel for proper centering */
+/* Bootstrap Carousel Hero Section  */
 #heroCarousel {
     position: relative;
 }
@@ -160,7 +160,6 @@ body {
     position: relative;
 }
 
-/* Dark overlay for better text readability */
 .carousel-item::before {
     content: '';
     position: absolute;
@@ -172,7 +171,6 @@ body {
     z-index: 1;
 }
 
-/* Carousel content wrapper - ensures perfect centering */
 .carousel-caption {
     position: absolute;
     top: 50%;
@@ -206,7 +204,6 @@ body {
     color: white;
 }
 
-/* Carousel background images using Unsplash */
 .carousel-item:nth-child(1) {
     background-image: url('../images/slider-img.png');
 }
@@ -219,17 +216,6 @@ body {
     background-image: url('../images/consulting-firms-australia-1170x550-1.jpg');
 }
 
-/* .carousel-item:nth-child(1) {
-    background-image: url('https://images.unsplash.com/photo-1560493676-04071c5f467b?w=1920&h=600&fit=crop');
-}
-
-.carousel-item:nth-child(2) {
-    background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&h=600&fit=crop');
-}
-
-.carousel-item:nth-child(3) {
-    background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&h=600&fit=crop');
-} */
 
 /* Custom carousel controls styling */
 .carousel-control-prev,
@@ -324,7 +310,7 @@ body {
     margin: 0 auto;
 }
 
-/* What We Do Section - Service cards with hover effects */
+/* What We Do Section*/
 .what-we-do {
     padding: 80px 0;
     /* background: linear-gradient(135deg, #c6cfc8 0%, #818181 100%); */
@@ -333,16 +319,6 @@ body {
     position: relative;
 }
 
-/* .what-we-do::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&h=800&fit=crop') center/cover;
-    opacity: 0.1;
-} */
 
 .what-we-do .container {
     position: relative;
@@ -391,7 +367,7 @@ body {
     margin: 0;
 }
 
-/* Welcome Section - About section with image and text */
+/* Welcome Section */
 .welcome-section {
     padding: 80px 0;
     background: var(--light-bg);
@@ -491,7 +467,7 @@ body {
     color: white;
 }
 
-/* Team/Career Section - Career information section */
+/* Team/Career Section */
 .team-section {
     padding: 80px 0;
     background: white;
@@ -525,7 +501,7 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Chairman Section - Compact side-by-side layout */
+/* Chairman Section  */
 .chairman-section {
     padding: 80px 0;
     background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
@@ -549,8 +525,6 @@ body {
 }
 
 .chairman-card img {
-    /* width: 100%;
-            height: 100%; */
     object-fit: cover;
     min-height: 350px;
 }
@@ -584,8 +558,7 @@ body {
     margin-bottom: 20px;
 }
 
-/* Footer - Site footer with contact info */
-/* Footer - Site footer with contact info and social media */
+/* Footer css start */
 .footer {
     background: #1a1a2e;
     color: white;
@@ -770,8 +743,6 @@ body {
     /* Chairman card responsive */
     .chairman-card img {
         width: 100%;
-        /* min-height: 250px;
-        max-height: 300px; */
     }
 
     .chairman-card .content {
@@ -1991,11 +1962,6 @@ body {
 }
 
 /* canvas header start */
-/* ========================================
-   OFF-CANVAS MOBILE HEADER - IMPROVED CSS CODE
-   Copy ALL of this code to the END of your assets/css/style.css file
-   ======================================== */
-
 /* Mobile Header Bar - Only visible on mobile */
 .mobile-header-bar {
     display: none;
@@ -2281,7 +2247,6 @@ body {
         display: block;
     }
 
-    /* Hide desktop top bar and navigation */
     .top-contact-bar,
     .navbar {
         display: none !important;
@@ -2294,13 +2259,11 @@ body {
     }
 }
 
-/* Smooth scrolling for iOS */
 .offcanvas-body {
     -webkit-overflow-scrolling: touch;
     overflow-y: auto;
 }
 
-/* Fix for offcanvas backdrop */
 .offcanvas-backdrop {
     background-color: rgba(0, 0, 0, 0.5);
 }
