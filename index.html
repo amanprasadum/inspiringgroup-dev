@@ -206,7 +206,6 @@
     </div>
 
     <!-- canvas menu end -->
-    <!-- Hero Carousel Section - Using Bootstrap Carousel for proper text centering -->
     <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"
@@ -246,28 +245,6 @@
                         data-aos-delay="400">Get Started</a>
                 </div>
             </div>
-
-            <!-- <div class="carousel-item">
-                <div class="carousel-caption">
-                    <h1 data-aos="fade-up" data-aos-duration="1000">Building a <span class="highlight">Better
-                            Tomorrow</span> Together</h1>
-                    <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Innovation, Excellence, and
-                        Commitment to Quality</p>
-                    <a href="#about" class="btn-primary-custom" data-aos="fade-up" data-aos-duration="1000"
-                        data-aos-delay="400">Learn More</a>
-                </div>
-            </div>
-
-            <div class="carousel-item">
-                <div class="carousel-caption">
-                    <h1 data-aos="fade-up" data-aos-duration="1000">Your <span class="highlight">Trusted Partner</span>
-                        in Progress</h1>
-                    <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Delivering quality solutions
-                        across multiple sectors</p>
-                    <a href="#contact" class="btn-primary-custom" data-aos="fade-up" data-aos-duration="1000"
-                        data-aos-delay="400">Contact Us</a>
-                </div>
-            </div> -->
         </div>
 
         <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
@@ -295,9 +272,6 @@
                         <h3>WELCOME TO INSPIRING GROUP</h3>
                         <h2>Inspiring Group is serving humankind since 2010. Story of success , growth and sustainable
                             development .</h2>
-                        <!-- <p>It is emerging as one of the fastest growing and leading private sector organization.
-                            Inspiring Group laid is an endeavor to provide best products and services to humanity at
-                            affordable prices.</p> -->
                         <a href="#" class="btn-primary-custom">Read More</a>
                     </div>
                 </div>
@@ -471,7 +445,6 @@
     <footer class="footer" id="contact">
         <div class="container">
             <div class="row">
-                <!-- map section will be here -->
                 <div class="col-lg-3">
                     <section class="map-section">
                         <div class="container-fluid p-0">
@@ -537,15 +510,13 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
-        // Initialize AOS with animations on every scroll (both up and down)
         AOS.init({
             duration: 1000,
-            once: false, // Animation triggers every time element scrolls into view
+            once: false, 
             offset: 100,
-            mirror: true // Animates elements when scrolling past them (both directions)
+            mirror: true 
         });
 
-        // Smooth scroll for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -559,7 +530,6 @@
             });
         });
 
-        // Navbar shadow on scroll
         window.addEventListener('scroll', function () {
             const navbar = document.querySelector('.navbar');
             if (window.scrollY > 50) {
