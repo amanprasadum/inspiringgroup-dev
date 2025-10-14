@@ -209,7 +209,6 @@
 
     <!-- canvas menu end -->
 
-    <!-- Hero Carousel Section - Using Bootstrap Carousel for proper text centering -->
     <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"
@@ -366,15 +365,13 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
-        // Initialize AOS with animations on every scroll (both up and down)
         AOS.init({
             duration: 1000,
-            once: false, // Animation triggers every time element scrolls into view
+            once: false, 
             offset: 100,
-            mirror: true // Animates elements when scrolling past them (both directions)
+            mirror: true 
         });
 
-        // Smooth scroll for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -388,7 +385,6 @@
             });
         });
 
-        // Navbar shadow on scroll
         window.addEventListener('scroll', function () {
             const navbar = document.querySelector('.navbar');
             if (window.scrollY > 50) {
