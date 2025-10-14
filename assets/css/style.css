@@ -559,7 +559,7 @@ body {
 }
 
 /* Footer css start */
-.footer {
+/* .footer {
     background: #1a1a2e;
     color: white;
     padding: 60px 0 20px;
@@ -600,6 +600,122 @@ body {
 .footer-contact i {
     margin-right: 10px;
     color: #2E5C8A;
+} */
+
+/* Light Footer CSS  */
+
+.footer {
+    background: #f8f9fa; /* Light background */
+    color: #333; /* Dark text */
+    padding: 60px 0 20px;
+    border-top: 3px solid #2E5C8A; /* Top border for definition */
+}
+
+.footer h5 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #2E5C8A; /* Keep heading blue */
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer ul li a {
+    color: #555; /* Dark gray for links */
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.footer ul li a:hover {
+    color: #f27735; /* Orange on hover */
+    padding-left: 5px;
+}
+
+.footer-contact p {
+    color: #555; /* Dark gray for contact text */
+    margin-bottom: 10px;
+}
+
+.footer-contact i {
+    margin-right: 10px;
+    color: #2E5C8A; /* Blue icons */
+}
+
+/* Social Media Icons in Footer */
+.footer-social {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-social a {
+    width: 40px;
+    height: 40px;
+    background: #2E5C8A; /* Solid blue background */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; /* White icons */
+    font-size: 18px;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.footer-social a:hover {
+    background: #f27735; /* Orange on hover */
+    color: white;
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 5px 15px rgba(242, 119, 53, 0.4);
+}
+
+.footer-bottom {
+    border-top: 1px solid #dee2e6; /* Light border */
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+    color: #666; /* Medium gray text */
+}
+
+/* Map Section - Light adjustment */
+.map-section {
+    margin-bottom: 15px;
+    padding: 0;
+    background: #ffffff; /* White background for map container */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.map-container {
+    width: 100%;
+    height: 226px;
+    overflow: hidden;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-social {
+        justify-content: left;
+    }
+    
+    .map-container {
+        height: 350px;
+    }
 }
 
 /* Social Media Icons in Footer */
