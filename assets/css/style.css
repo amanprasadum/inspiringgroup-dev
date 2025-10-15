@@ -504,7 +504,7 @@ body {
 
 /* Chairman Section  */
 .chairman-section {
-   background: #2e5c8a36;
+    background: #2e5c8a36;
     padding: 80px 0;
 }
 
@@ -622,7 +622,7 @@ body {
     align-items: flex-start;
 }
 
-.footer-top > .container > .row > div {
+.footer-top>.container>.row>div {
     display: flex;
     flex-direction: column;
 }
@@ -736,15 +736,17 @@ body {
 .get-social-listing li a {
     width: 40px;
     height: 40px;
-    background: #2E5C8A;
+    /* background: #2E5C8A; */
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    /* color: white; */
     font-size: 18px;
     transition: all 0.3s;
     text-decoration: none;
+    background: #fff;
+    color: #0076b7;
 }
 
 .get-social-listing li a:hover {
@@ -779,11 +781,11 @@ body {
         margin-top: 30px;
         font-size: 16px;
     }
-    
+
     .footer-top {
         padding: 40px 0 30px;
     }
-    
+
     .footer-links-wrapper {
         flex-direction: column;
         gap: 20px;
@@ -794,28 +796,28 @@ body {
     .pst_logo img {
         max-width: 120px;
     }
-    
+
     .map-info iframe {
         height: 200px;
     }
-    
+
     .get-social-listing {
         justify-content: flex-start;
     }
-    
+
     .quick-heading {
         font-size: 16px;
         margin-top: 25px;
     }
-    
+
     .address-list {
         font-size: 13px;
     }
-    
+
     .hidden-xs {
         display: none;
     }
-    
+
     .footer-links-wrapper {
         flex-direction: column;
         gap: 10px;
