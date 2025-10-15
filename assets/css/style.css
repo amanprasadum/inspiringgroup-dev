@@ -617,20 +617,12 @@ body {
 }
 
 .quick-heading {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     color: #2E5C8A;
     text-transform: uppercase;
     margin-bottom: 25px;
     letter-spacing: 0.5px;
-}
-
-.companies-heading {
-    font-size: 16px;
-    font-weight: bold;
-    color: #2E5C8A;
-    margin-top: 30px;
-    margin-bottom: 15px;
 }
 
 /* Map Info */
@@ -661,10 +653,11 @@ body {
 .address-list {
     font-size: 14px;
     color: #555;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     display: flex;
     align-items: flex-start;
     line-height: 1.6;
+    font-weight: normal;
 }
 
 .address-list span:first-child {
@@ -687,15 +680,22 @@ body {
     color: #f27735;
 }
 
+/* Footer Links Wrapper - Side by Side Lists */
+.footer-links-wrapper {
+    display: flex;
+    gap: 40px;
+}
+
 /* Footer List */
 .footer-list {
     list-style: none;
     padding: 0;
     margin: 0;
+    flex: 1;
 }
 
 .footer-list li {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .footer-list li a {
@@ -756,15 +756,25 @@ body {
     font-size: 14px;
 }
 
+/* Hidden class for mobile */
+.hidden-xs {
+    display: block;
+}
+
 /* Responsive Styles */
 @media (max-width: 991px) {
     .quick-heading {
         margin-top: 30px;
-        font-size: 18px;
+        font-size: 16px;
     }
     
     .footer-top {
         padding: 40px 0 30px;
+    }
+    
+    .footer-links-wrapper {
+        flex-direction: column;
+        gap: 20px;
     }
 }
 
@@ -789,16 +799,14 @@ body {
     .address-list {
         font-size: 13px;
     }
-}
-
-/* Hidden class for mobile */
-.hidden-xs {
-    display: block;
-}
-
-@media (max-width: 767px) {
+    
     .hidden-xs {
         display: none;
+    }
+    
+    .footer-links-wrapper {
+        flex-direction: column;
+        gap: 10px;
     }
 }
 
