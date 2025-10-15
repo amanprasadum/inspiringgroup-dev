@@ -410,7 +410,8 @@ body {
 /* Products/Services Dark Section - Healthcare products showcase */
 .products-section {
     padding: 80px 0;
-    background: linear-gradient(135deg, #1e5128 0%, #2d6a4f 100%);
+    /* background: linear-gradient(135deg, #1e5128 0%, #2d6a4f 100%); */
+    background: linear-gradient(45deg, rgb(11 95 2 / 90%), rgb(0 19 71 / 90%));
     color: white;
     position: relative;
 }
