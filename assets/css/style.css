@@ -273,24 +273,11 @@ body {
     gap: 15px;
 }
 
-/* .social-icons a {
+ .social-icons a {
     color: white;
     font-size: 18px;
     transition: all 0.3s;
-} */
-
-.social-icons a {
-    background: #ffffff;
-    color: #2e5c8a;
-    font-size: 18px;
-    width: 32px;
-    border-radius: 58%;
-    display: flex;
-    height: 32px;
-    transition: all 0.3s;
-    align-items: center;
-    justify-content: center;
-}
+} 
 
 .social-icons a:hover {
     color: var(--light-green);
