@@ -19,6 +19,143 @@ body {
     overflow-x: hidden;
 }
 
+/* scroll to top button start */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #ff873e 0%, #009128 100%);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px) scale(0.8);
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    box-shadow: 0 10px 30px rgba(255, 135, 62, 0.4);
+    z-index: 1000;
+    overflow: hidden;
+}
+
+#scrollTopBtn.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+#scrollTopBtn:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 15px 40px rgba(255, 135, 62, 0.6);
+}
+
+#scrollTopBtn:active {
+    transform: translateY(-2px) scale(1.05);
+}
+
+#scrollTopBtn::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-top: 3px solid white;
+    border-right: 3px solid white;
+    transform: rotate(-45deg);
+    margin-top: 5px;
+    animation: arrowBounce 2s infinite;
+}
+
+#scrollTopBtn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.6s ease-out;
+}
+
+#scrollTopBtn:hover::after {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+}
+
+@keyframes glowRing {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 135, 62, 0.7);
+    }
+
+    50% {
+        box-shadow: 0 0 0 15px rgba(255, 135, 62, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 135, 62, 0);
+    }
+}
+
+#scrollTopBtn.show {
+    animation: glowRing 2s infinite;
+}
+
+@keyframes arrowBounce {
+
+    0%,
+    100% {
+        transform: rotate(-45deg) translateY(0);
+    }
+
+    50% {
+        transform: rotate(-45deg) translateY(-5px);
+    }
+}
+
+.progress-ring {
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: 66px;
+    height: 66px;
+    transform: rotate(-90deg);
+}
+
+.progress-ring-circle {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.8);
+    stroke-width: 3;
+    stroke-dasharray: 207;
+    stroke-dashoffset: 207;
+    transition: stroke-dashoffset 0.3s ease;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+}
+
+@media (max-width: 768px) {
+    #scrollTopBtn {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .progress-ring {
+        width: 56px;
+        height: 56px;
+    }
+
+    #scrollTopBtn::before {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/* scroll to top button end */
 /* Top Contact Bar - Header with logo and contact info */
 .top-contact-bar {
     background: #ffffff;
