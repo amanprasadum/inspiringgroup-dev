@@ -177,7 +177,7 @@ body {
 
 .top-logo img {
     width: 100px;
-    height: 100px;
+    height: 50px;
 }
 
 .top-logo span {
@@ -217,7 +217,7 @@ body {
 /* Navigation - Main menu with dropdowns */
 .navbar {
     background: var(--primary-blue) !important;
-    padding: 15px 0;
+    /* padding: 15px 0; */
 }
 
 .navbar .container {
