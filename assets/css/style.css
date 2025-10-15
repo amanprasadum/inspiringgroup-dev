@@ -615,7 +615,7 @@ body {
 
 .footer-top {
     padding: 60px 0 40px;
-    /* border-top: 3px solid #2E5C8A; */
+    border-top: 1px solid #d7d7d7;
 }
 
 /* Align all columns to top */
