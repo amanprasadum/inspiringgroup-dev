@@ -613,7 +613,7 @@ body {
 
 .footer-top {
     padding: 60px 0 40px;
-    border-top: 3px solid #2E5C8A;
+    /* border-top: 3px solid #2E5C8A; */
 }
 
 /* Align all columns to top */
