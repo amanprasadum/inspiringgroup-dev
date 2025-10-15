@@ -369,6 +369,7 @@ body {
 
 /* Welcome Section */
 .welcome-section {
+    background-image: url(../images/product-bg.jpg);
     padding: 80px 0;
     background: var(--light-bg);
 }
