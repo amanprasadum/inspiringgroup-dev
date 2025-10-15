@@ -616,6 +616,16 @@ body {
     border-top: 3px solid #2E5C8A;
 }
 
+/* Align all columns to top */
+.footer-top .row {
+    align-items: flex-start;
+}
+
+.footer-top > .container > .row > div {
+    display: flex;
+    flex-direction: column;
+}
+
 .quick-heading {
     font-size: 18px;
     font-weight: bold;
@@ -623,6 +633,7 @@ body {
     text-transform: uppercase;
     margin-bottom: 25px;
     letter-spacing: 0.5px;
+    margin-top: 0;
 }
 
 /* Map Info */
@@ -2163,9 +2174,7 @@ body {
 }
 
 /* Off-canvas Menu Styling */
-.offcanvas {
-    /* width: 280px !important; */
-}
+
 
 .offcanvas-header {
     background: white;
