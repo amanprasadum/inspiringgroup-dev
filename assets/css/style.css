@@ -603,191 +603,202 @@ body {
 } */
 
 /* Light Footer CSS  */
-
+/* Footer Styles - Reference Design */
 .footer {
-    /*background: #f8f9fa;*/ /* Light background */
     background: #f8f9fa;
-
-    color: #333; /* Dark text */
-    padding: 60px 0 20px;
-    border-top: 3px solid #2E5C8A; /* Top border for definition */
+    color: #333;
+    padding: 0;
     background-image: url(../images/pattern.jpg);
 }
 
-.footer h5 {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #2E5C8A; /* Keep heading blue */
+.footer-top {
+    padding: 60px 0 40px;
+    border-top: 3px solid #2E5C8A;
 }
 
-.footer ul {
+.quick-heading {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2E5C8A;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    letter-spacing: 0.5px;
+}
+
+.companies-heading {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2E5C8A;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* Map Info */
+.map-info {
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.map-info iframe {
+    width: 100%;
+    height: 150px;
+    border: none;
+}
+
+/* Logo Section */
+.pst_logo {
+    margin-bottom: 20px;
+}
+
+.pst_logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Address List */
+.address-list {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+    line-height: 1.6;
+}
+
+.address-list span:first-child {
+    margin-right: 10px;
+    color: #2E5C8A;
+    min-width: 20px;
+}
+
+.address-list span:first-child i {
+    font-size: 16px;
+}
+
+.address-list a {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.address-list a:hover {
+    color: #f27735;
+}
+
+/* Footer List */
+.footer-list {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-.footer ul li {
-    margin-bottom: 10px;
+.footer-list li {
+    margin-bottom: 12px;
 }
 
-.footer ul li a {
-    color: #555; /* Dark gray for links */
+.footer-list li a {
+    color: #555;
     text-decoration: none;
+    font-size: 14px;
     transition: all 0.3s;
+    display: inline-block;
 }
 
-.footer ul li a:hover {
-    color: #f27735; /* Orange on hover */
+.footer-list li a:hover {
+    color: #f27735;
     padding-left: 5px;
 }
 
-.footer-contact p {
-    color: #555; /* Dark gray for contact text */
-    margin-bottom: 10px;
-}
-
-.footer-contact i {
-    margin-right: 10px;
-    color: #2E5C8A; /* Blue icons */
-}
-
-/* Social Media Icons in Footer */
-.footer-social {
+/* Social Media Listing */
+.get-social-listing {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
     gap: 15px;
-    margin-top: 20px;
     flex-wrap: wrap;
 }
 
-.footer-social a {
+.get-social-listing li a {
     width: 40px;
     height: 40px;
-    background: #2E5C8A; /* Solid blue background */
+    background: #2E5C8A;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white; /* White icons */
+    color: white;
     font-size: 18px;
     transition: all 0.3s;
     text-decoration: none;
 }
 
-.footer-social a:hover {
-    background: #f27735; /* Orange on hover */
+.get-social-listing li a:hover {
+    background: #f27735;
     color: white;
     transform: translateY(-3px) scale(1.1);
     box-shadow: 0 5px 15px rgba(242, 119, 53, 0.4);
 }
 
+/* Footer Bottom */
 .footer-bottom {
-    border-top: 1px solid #dee2e6; /* Light border */
-    margin-top: 40px;
-    padding-top: 20px;
-    text-align: center;
-    color: #666; /* Medium gray text */
+    background: #1a1a1a;
+    padding: 20px 0;
+    margin-top: 0;
+    border-top: 1px solid #333;
 }
 
-/* Map Section - Light adjustment */
-.map-section {
-    margin-bottom: 15px;
-    padding: 0;
-    background: #ffffff; /* White background for map container */
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+.footer-bottom p {
+    margin: 0;
+    color: #888;
+    font-size: 14px;
 }
 
-.map-container {
-    width: 100%;
-    height: 226px;
-    overflow: hidden;
-}
-
-.map-container iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .footer-social {
-        justify-content: left;
+/* Responsive Styles */
+@media (max-width: 991px) {
+    .quick-heading {
+        margin-top: 30px;
+        font-size: 18px;
     }
     
-    .map-container {
-        height: 350px;
+    .footer-top {
+        padding: 40px 0 30px;
     }
 }
 
-/* Social Media Icons in Footer */
-.footer-social {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
-    flex-wrap: wrap;
-}
-
-.footer-social a {
-    width: 40px;
-    height: 40px;
-    background: rgba(46, 92, 138, 0.2);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #2E5C8A;
-    font-size: 18px;
-    transition: all 0.3s;
-    text-decoration: none;
-}
-
-.footer-social a:hover {
-    background: #2E5C8A;
-    color: white;
-    transform: translateY(-3px) scale(1.1);
-    box-shadow: 0 5px 15px rgba(46, 92, 138, 0.4);
-}
-
-.footer-bottom {
-    border-top: 1px solid #333;
-    margin-top: 40px;
-    padding-top: 20px;
-    text-align: center;
-    color: #888;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .footer-social {
-        justify-content: left;
-        /* justify-content: center; */
+@media (max-width: 767px) {
+    .pst_logo img {
+        max-width: 120px;
+    }
+    
+    .map-info iframe {
+        height: 200px;
+    }
+    
+    .get-social-listing {
+        justify-content: flex-start;
+    }
+    
+    .quick-heading {
+        font-size: 16px;
+        margin-top: 25px;
+    }
+    
+    .address-list {
+        font-size: 13px;
     }
 }
 
-.map-section {
-    margin-bottom: 15px;
-    padding: 0;
-    background: #f8f9fa;
+/* Hidden class for mobile */
+.hidden-xs {
+    display: block;
 }
 
-.map-container {
-    width: 100%;
-    /* height: 450px; */
-    height: 226px;
-    overflow: hidden;
-}
-
-.map-container iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-@media (max-width: 768px) {
-    .map-container {
-        height: 350px;
+@media (max-width: 767px) {
+    .hidden-xs {
+        display: none;
     }
 }
 
