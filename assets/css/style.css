@@ -425,6 +425,53 @@ w #heroCarousel {
     background: white;
 }
 
+/* Simple Carousel Slide Animation */
+.carousel-item {
+    opacity: 0;
+}
+
+.carousel-item.active {
+    opacity: 1;
+    animation: slideIn 0.8s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: scale(0.95) rotateY(5deg);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1) rotateY(0deg);
+        opacity: 1;
+    }
+}
+
+/* Text Animation */
+.carousel-caption h1 {
+    animation: slideDownCenter 0.8s ease-out 0.2s both;
+}
+
+.carousel-caption p {
+    animation: slideDownCenter 0.8s ease-out 0.4s both;
+}
+
+.carousel-caption .btn-primary-custom {
+    animation: slideDownCenter 0.8s ease-out 0.6s both;
+}
+
+@keyframes slideDownCenter {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .btn-primary-custom {
     /* background: var(--primary-green); */
     background: var(--primary-orange);
@@ -717,52 +764,7 @@ w #heroCarousel {
     margin-bottom: 20px;
 }
 
-/* Footer css start */
-/* .footer {
-    background: #1a1a2e;
-    color: white;
-    padding: 60px 0 20px;
-}
-
-.footer h5 {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #2E5C8A;
-}
-
-.footer ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer ul li {
-    margin-bottom: 10px;
-}
-
-.footer ul li a {
-    color: #ccc;
-    text-decoration: none;
-    transition: all 0.3s;
-}
-
-.footer ul li a:hover {
-    color: #2E5C8A;
-    padding-left: 5px;
-}
-
-.footer-contact p {
-    color: #ccc;
-    margin-bottom: 10px;
-}
-
-.footer-contact i {
-    margin-right: 10px;
-    color: #2E5C8A;
-} */
-
-/* Light Footer CSS  */
-/* Footer Styles - Reference Design */
+/* Footer Styles */
 .footer {
     background: #f8f9fa;
     color: #333;
@@ -2586,49 +2588,3 @@ w #heroCarousel {
 /* canvas header end */
 
 /* testing mode  */
-/* Simple Carousel Slide Animation */
-.carousel-item {
-    opacity: 0;
-}
-
-.carousel-item.active {
-    opacity: 1;
-    animation: slideIn 0.8s ease-out;
-}
-
-@keyframes slideIn {
-    from {
-        transform: scale(0.95) rotateY(5deg);
-        opacity: 0;
-    }
-
-    to {
-        transform: scale(1) rotateY(0deg);
-        opacity: 1;
-    }
-}
-
-/* Text Animation */
-.carousel-caption h1 {
-    animation: slideDownCenter 0.8s ease-out 0.2s both;
-}
-
-.carousel-caption p {
-    animation: slideDownCenter 0.8s ease-out 0.4s both;
-}
-
-.carousel-caption .btn-primary-custom {
-    animation: slideDownCenter 0.8s ease-out 0.6s both;
-}
-
-@keyframes slideDownCenter {
-    from {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
