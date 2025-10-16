@@ -410,6 +410,7 @@ body {
 }
 
 .carousel-indicators button {
+    display: none;
     width: 12px;
     height: 12px;
     border-radius: 50%;
