@@ -296,8 +296,9 @@ body {
 }
 
 .social-icons a:hover {
-    color: var(--light-green);
+    color: #ffffff;
     transform: translateY(-3px);
+    background-color: #ff7e39;
 }
 
 /* Bootstrap Carousel Hero Section  */
