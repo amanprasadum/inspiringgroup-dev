@@ -176,6 +176,7 @@ body {
 }
 
 .top-logo img {
+    margin-left: 14px;
     width: 60px;
     height: 60px;
 }
