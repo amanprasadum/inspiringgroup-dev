@@ -2584,3 +2584,71 @@ body {
 /* canvas header end */
 
 /* testing mode  */
+/* Hero Carousel Animations */
+.carousel-item {
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+/* Image zoom and fade animation on slide change */
+.carousel-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+    transform: scale(1);
+    transition: transform 0.8s ease-out;
+}
+
+.carousel-item:nth-child(1)::after {
+    background-image: url('../images/slider-img.png');
+}
+
+.carousel-item:nth-child(2)::after {
+    background-image: url('../images/ippl.jpg');
+}
+
+.carousel-item:nth-child(3)::after {
+    background-image: url('../images/consulting-firms-australia-1170x550-1.jpg');
+}
+
+.carousel-item.active::after {
+    transform: scale(1.05);
+}
+
+/* Text animations */
+.carousel-caption h1,
+.carousel-caption p,
+.carousel-caption .btn-primary-custom {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.carousel-item.active .carousel-caption h1 {
+    animation: slideUpFade 0.8s ease-out 0.3s forwards;
+}
+
+.carousel-item.active .carousel-caption p {
+    animation: slideUpFade 0.8s ease-out 0.5s forwards;
+}
+
+.carousel-item.active .carousel-caption .btn-primary-custom {
+    animation: slideUpFade 0.8s ease-out 0.7s forwards;
+}
+
+@keyframes slideUpFade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
