@@ -163,6 +163,7 @@ body {
 }
 
 .top-bar-content {
+    width: 94%; 
     display: flex;
     justify-content: space-between;
     align-items: center;
