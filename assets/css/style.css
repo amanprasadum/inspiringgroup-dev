@@ -303,7 +303,7 @@ body {
     background-color: #ff7e39;
 }
 
-/* Bootstrap Carousel Hero Section  */
+/* Bootstrap Carousel Hero Section  */w
 #heroCarousel {
     position: relative;
 }
@@ -2582,3 +2582,26 @@ body {
 }
 
 /* canvas header end */
+
+/* testing mode  */
+.hero-slide-img {
+    transition: transform 0.8s ease, opacity 0.8s ease;
+    opacity: 0.8;
+}
+
+.carousel-item.active .hero-slide-img {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+/* Add slight upward fade animation for texts */
+.hero-slide-text {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.carousel-item.active .hero-slide-text {
+    opacity: 1;
+    transform: translateY(0);
+}
