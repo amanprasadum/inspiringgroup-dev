@@ -163,7 +163,7 @@ body {
 }
 
 .top-bar-content {
-    width: 94%; 
+    width: 94%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -204,9 +204,22 @@ body {
     font-size: 14px;
 }
 
-.contact-item i {
+/* .contact-item i {
     color: var(--primary-blue);
     font-size: 20px;
+} */
+
+.contact-item i {
+    height: 38px;
+    background: #195d87;
+    color: #ffffff;
+    font-size: 18px;
+    width: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 50%;
 }
 
 .contact-item strong {
