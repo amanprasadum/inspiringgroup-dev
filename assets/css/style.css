@@ -303,8 +303,8 @@ body {
     background-color: #ff7e39;
 }
 
-/* Bootstrap Carousel Hero Section  */w
-#heroCarousel {
+/* Bootstrap Carousel Hero Section  */
+w #heroCarousel {
     position: relative;
 }
 
@@ -771,7 +771,8 @@ body {
 }
 
 .footer-top {
-    padding: 60px 0 40px;
+    /* padding: 60px 0 40px; */
+    padding: 36px 0 20px;
     border-top: 1px solid #d7d7d7;
 }
 
@@ -2600,6 +2601,7 @@ body {
         transform: scale(0.95) rotateY(5deg);
         opacity: 0;
     }
+
     to {
         transform: scale(1) rotateY(0deg);
         opacity: 1;
@@ -2624,6 +2626,7 @@ body {
         opacity: 0;
         transform: translateY(-50px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
