@@ -2602,20 +2602,3 @@ w #heroCarousel {
 /* canvas header end */
 
 /* custom animation  */
-/* Phone icon ringing animation */
-@keyframes phoneRing {
-    0% { transform: rotate(0deg); }
-    15% { transform: rotate(15deg); }
-    30% { transform: rotate(-15deg); }
-    45% { transform: rotate(10deg); }
-    60% { transform: rotate(-10deg); }
-    75% { transform: rotate(5deg); }
-    100% { transform: rotate(0deg); }
-}
-
-.fas.fa-phone-alt {
-    display: inline-block;
-    animation: phoneRing 1.5s ease-in-out infinite;
-    transform-origin: 25% 50%; /* pivot near the base of the phone handset */
-    color: #28a745; /* beautiful green color as example, customize as needed */
-}
