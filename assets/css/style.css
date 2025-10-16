@@ -304,32 +304,19 @@ body {
 }
 
 /* Bootstrap Carousel Hero Section  */w
-/* Hero Slick Slider */
-.hero-slider {
+#heroCarousel {
     position: relative;
-    overflow: hidden;
 }
 
-.hero-slide {
-    position: relative;
+.carousel-item {
     height: 600px;
-    overflow: hidden;
-}
-
-.hero-slide-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    transform: scale(1);
-    transition: transform 0.8s ease-out;
+    position: relative;
 }
 
-.hero-slide-bg::before {
+.carousel-item::before {
     content: '';
     position: absolute;
     top: 0;
@@ -340,20 +327,7 @@ body {
     z-index: 1;
 }
 
-.slick-active .hero-slide-bg {
-    animation: zoomIn 8s ease-out forwards;
-}
-
-@keyframes zoomIn {
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(1.08);
-    }
-}
-
-.hero-caption {
+.carousel-caption {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -362,35 +336,11 @@ body {
     text-align: center;
     width: 90%;
     max-width: 800px;
+    bottom: auto;
+    right: auto;
 }
 
-.hero-caption h1,
-.hero-caption p,
-.hero-caption .btn-primary-custom {
-    opacity: 0;
-    transform: translateY(30px);
-}
-
-.slick-active .hero-caption h1 {
-    animation: slideUpFade 0.8s ease-out 0.3s forwards;
-}
-
-.slick-active .hero-caption p {
-    animation: slideUpFade 0.8s ease-out 0.5s forwards;
-}
-
-.slick-active .hero-caption .btn-primary-custom {
-    animation: slideUpFade 0.8s ease-out 0.7s forwards;
-}
-
-@keyframes slideUpFade {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.hero-caption h1 {
+.carousel-caption h1 {
     font-size: 52px;
     font-weight: bold;
     margin-bottom: 20px;
@@ -398,95 +348,104 @@ body {
     color: white;
 }
 
-.hero-caption .highlight {
+.carousel-caption .highlight {
+    /* color: var(--light-green); */
     color: var(--primary-orange);
 }
 
-.hero-caption p {
+.carousel-caption p {
     font-size: 22px;
     margin-bottom: 30px;
     font-weight: 300;
     color: white;
 }
 
-/* Slick Dots */
-.slick-dots {
-    bottom: 30px;
+.carousel-item:nth-child(1) {
+    background-image: url('../images/slider-img.png');
 }
 
-.slick-dots li button:before {
-    font-size: 12px;
-    color: white;
-    opacity: 0.5;
+.carousel-item:nth-child(2) {
+    background-image: url('../images/ippl.jpg');
 }
 
-.slick-dots li.slick-active button:before {
-    color: white;
-    opacity: 1;
+.carousel-item:nth-child(3) {
+    background-image: url('../images/consulting-firms-australia-1170x550-1.jpg');
 }
 
-/* Slick Arrows */
-.slick-prev,
-.slick-next {
+
+/* Custom carousel controls styling */
+.carousel-control-prev,
+.carousel-control-next {
     width: 50px;
     height: 50px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
-    z-index: 10;
-}
-
-.slick-prev:hover,
-.slick-next:hover {
-    background: rgba(255, 255, 255, 0.4);
-}
-
-.slick-prev {
-    left: 20px;
-}
-
-.slick-next {
-    right: 20px;
-}
-
-.slick-prev:before,
-.slick-next:before {
-    font-size: 24px;
+    top: 50%;
+    transform: translateY(-50%);
     opacity: 1;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .hero-slide {
-        height: 500px;
-    }
-    
-    .hero-caption h1 {
-        font-size: 32px;
-    }
-    
-    .hero-caption p {
-        font-size: 18px;
-    }
-    
-    .slick-prev,
-    .slick-next {
-        display: none !important;
-    }
+.carousel-control-prev {
+    left: 20px;
 }
 
-@media (max-width: 576px) {
-    .hero-slide {
-        height: 450px;
-    }
-    
-    .hero-caption h1 {
-        font-size: 26px;
-    }
-    
-    .hero-caption p {
-        font-size: 16px;
-    }
+.carousel-control-next {
+    right: 20px;
 }
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Carousel indicators styling */
+.carousel-indicators {
+    bottom: 30px;
+}
+
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    transition: all 0.3s;
+}
+
+.carousel-indicators button.active {
+    width: 30px;
+    border-radius: 10px;
+    background: white;
+}
+
+.btn-primary-custom {
+    /* background: var(--primary-green); */
+    background: var(--primary-orange);
+    color: white;
+    padding: 14px 35px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-primary-custom:hover {
+    background: var(--light-green);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+    color: white;
+}
+
 /* Section Styling - Common section title styling */
 .section-title {
     text-align: center;
