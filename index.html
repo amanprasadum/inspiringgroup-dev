@@ -520,6 +520,32 @@
     <!-- our app.js -->
     <script src="assets/js/app.js"></script>
     <script>
+        $(document).ready(function () {
+            $('.hero-slider').slick({
+                autoplay: true,
+                autoplaySpeed: 5000,
+                speed: 800,
+                fade: true,
+                cssEase: 'ease-in-out',
+                pauseOnHover: false,  // Continues sliding even on hover
+                pauseOnFocus: false,
+                dots: true,
+                arrows: true,
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+    <script>
         AOS.init({
             duration: 1000,
             once: false,
