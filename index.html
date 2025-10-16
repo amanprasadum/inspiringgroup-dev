@@ -205,7 +205,8 @@
     </div>
     <!-- canvas menu end -->
     <!-- hero carousel atart -->
-    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+    <!-- <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel"> -->
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="false">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"
                 aria-label="Slide 1"></button>
@@ -540,6 +541,12 @@
             offset: 100,
             mirror: true
         });
+        var myCarousel = document.querySelector('#heroCarousel')
+        var carousel = new bootstrap.Carousel(myCarousel, {
+            interval: 3000,  
+            pause: false,    
+            ride: 'carousel'
+        })
     </script>
 </body>
 <!-- comment -->
