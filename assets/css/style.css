@@ -273,11 +273,27 @@ body {
     gap: 15px;
 }
 
- .social-icons a {
+/* .social-icons a {
     color: white;
     font-size: 18px;
     transition: all 0.3s;
-} 
+}  */
+
+.social-icons a {
+    padding: 6px;
+    background-color: #fff;
+    color: #195d87;
+    font-size: 18px;
+    transition: all 0.3s;
+    height: 40px;
+    border-radius: 82px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+}
 
 .social-icons a:hover {
     color: var(--light-green);
