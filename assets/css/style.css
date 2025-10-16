@@ -159,7 +159,7 @@ body {
 /* Top Contact Bar - Header with logo and contact info */
 .top-contact-bar {
     background: #ffffff;
-    padding: 10px 0;
+    /* padding: 10px 0; */
 }
 
 .top-bar-content {
