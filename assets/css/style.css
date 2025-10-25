@@ -2602,3 +2602,13 @@ w #heroCarousel {
 /* canvas header end */
 
 /* custom animation  */
+/* Add to your style.css file */
+.map-info iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* Extra safety for all iframes */
+iframe {
+    max-width: 100%;
+}
