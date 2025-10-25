@@ -2008,7 +2008,7 @@ w #heroCarousel {
 
 /* Intro Box */
 .agro-intro-box {
-    max-width: 900px;
+    /* max-width: 900px; */
     margin: 0 auto 50px;
     background: white;
     padding: 40px;
