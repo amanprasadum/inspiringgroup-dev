@@ -350,6 +350,7 @@ w #heroCarousel {
     text-align: center;
     width: 90%;
     /* max-width: 800px; */
+    max-width: 100%;
     bottom: auto;
     right: auto;
 }
@@ -833,6 +834,7 @@ w #heroCarousel {
 
 .pst_logo img {
     /* max-width: 150px; */
+    max-width: 100%;
     height: auto;
 }
 
@@ -970,6 +972,7 @@ w #heroCarousel {
 @media (max-width: 767px) {
     .pst_logo img {
         /* max-width: 120px; */
+        max-width: 100%;
     }
 
     .map-info iframe {
@@ -1153,6 +1156,7 @@ w #heroCarousel {
 
 .content-box {
     /* max-width: 900px; */
+    max-width: 100%;
     margin: 0 auto;
     background: white;
     padding: 45px;
@@ -1413,6 +1417,7 @@ w #heroCarousel {
 /* Policy Intro */
 .policy-intro {
     /* max-width: 900px; */
+    max-width: 100%;
     margin: 0 auto 40px;
     background: white;
     padding: 30px;
@@ -1836,6 +1841,7 @@ w #heroCarousel {
 /* Career Image */
 .career-page-image {
     /* max-width: 900px; */
+    max-width: 100%;
     margin: 0 auto 40px;
     border-radius: 10px;
     overflow: hidden;
@@ -1851,6 +1857,7 @@ w #heroCarousel {
 /* Career Content Box */
 .career-content-box {
     /* max-width: 900px; */
+    max-width: 100%;
     margin: 0 auto;
     background: white;
     padding: 45px;
@@ -1928,6 +1935,7 @@ w #heroCarousel {
 /* Management Card */
 .management-card {
     /* max-width: 900px; */
+    max-width: 100%;
     margin: 0 auto 50px;
     background: white;
     padding: 45px;
@@ -2009,6 +2017,7 @@ w #heroCarousel {
 /* Intro Box */
 .agro-intro-box {
     /* max-width: 900px; */
+    max-width: 100%;
     margin: 0 auto 50px;
     background: white;
     padding: 40px;
@@ -2035,6 +2044,7 @@ w #heroCarousel {
 /* Agro Cards */
 .agro-card {
     /* max-width: 900px; */
+    max-width: 100%;
     margin: 0 auto 40px;
     background: white;
     padding: 35px;
@@ -2121,6 +2131,7 @@ w #heroCarousel {
 /* Projects Section */
 .agro-projects {
     /* max-width: 900px; */
+    max-width: 100%;
     margin: 0 auto;
     background: white;
     padding: 35px;
@@ -2199,6 +2210,7 @@ w #heroCarousel {
 /* Intro Box */
 .ippl-intro-box {
     /* max-width: 900px; */
+    max-width: 100%;
     margin: 0 auto 50px;
     background: white;
     padding: 40px;
@@ -2229,6 +2241,7 @@ w #heroCarousel {
 /* Milestones Section */
 .ippl-milestones {
     /* max-width: 900px; */
+    max-width: 100%;
     margin: 0 auto;
     background: white;
     padding: 35px;
