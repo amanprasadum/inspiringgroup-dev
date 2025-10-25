@@ -2372,37 +2372,37 @@ w #heroCarousel {
     padding: 20px;
     border-bottom: 2px solid #f0f0f0;
 }
-
+/* 
 .offcanvas-logo {
     flex-grow: 1;
     text-align: center;
-}
+} */
 
-.offcanvas-logo img {
+/* .offcanvas-logo img {
     height: 80px;
     width: auto;
-}
+} */
 
-.offcanvas .btn-close {
+/* background: #f0f0f0; */
+/* .offcanvas .btn-close {
     position: absolute;
     top: 15px;
     right: 15px;
-    /* background: #f0f0f0; */
     opacity: 1;
     border-radius: 50%;
     filter: none;
     width: 32px;
     height: 32px;
-}
+} */
 
-.offcanvas .btn-close:hover {
+/* .offcanvas .btn-close:hover {
     background: #2E5C8A;
-}
+} */
 
-.offcanvas-body {
+/* .offcanvas-body {
     padding: 0;
     background: #ffffff;
-}
+} */
 
 /* Mobile Navigation Item (without dropdown) */
 .mobile-nav-item {
@@ -2515,31 +2515,31 @@ w #heroCarousel {
 }
 
 /* Off-canvas Contact Section */
-.offcanvas-contact {
+/* .offcanvas-contact {
     padding: 20px;
     background: #f8f9fa;
     margin-top: 15px;
     border-top: 1px solid #e0e0e0;
-}
+} */
 
-.offcanvas-contact h6 {
+/* .offcanvas-contact h6 {
     color: #2E5C8A;
     font-weight: 600;
     margin-bottom: 12px;
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 1px;
-}
+} */
 
-.offcanvas-contact-item {
+/* .offcanvas-contact-item {
     display: flex;
     align-items: center;
     gap: 10px;
     margin-bottom: 10px;
     font-size: 13px;
-}
+} */
 
-.offcanvas-contact-item i {
+/* .offcanvas-contact-item i {
     color: #f27735;
     font-size: 14px;
     width: 18px;
@@ -2554,10 +2554,10 @@ w #heroCarousel {
 
 .offcanvas-contact-item a:hover {
     color: #2E5C8A;
-}
+} */
 
 /* Off-canvas Social Icons */
-.offcanvas-social {
+/* .offcanvas-social {
     display: flex;
     gap: 10px;
     padding: 15px 20px 20px;
@@ -2583,7 +2583,7 @@ w #heroCarousel {
     background: #f27735;
     transform: translateY(-2px);
     color: white;
-}
+} */
 
 /* Hide desktop navigation on mobile, show mobile header */
 @media (max-width: 991px) {
@@ -2603,14 +2603,14 @@ w #heroCarousel {
     }
 }
 
-.offcanvas-body {
+/* .offcanvas-body {
     -webkit-overflow-scrolling: touch;
     overflow-y: auto;
-}
+} */
 
-.offcanvas-backdrop {
+/* .offcanvas-backdrop {
     background-color: rgba(0, 0, 0, 0.5);
-}
+} */
 
 /* canvas header end */
 
