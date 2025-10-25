@@ -969,7 +969,7 @@ w #heroCarousel {
 
 @media (max-width: 767px) {
     .pst_logo img {
-        max-width: 120px;
+        /* max-width: 120px; */
     }
 
     .map-info iframe {
