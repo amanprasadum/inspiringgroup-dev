@@ -163,7 +163,7 @@ body {
 }
 
 .top-bar-content {
-    width: 94%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -349,8 +349,7 @@ w #heroCarousel {
     z-index: 2;
     text-align: center;
     width: 90%;
-    /* max-width: 800px; */
-    max-width: 100%;
+    max-width: 800px;
     bottom: auto;
     right: auto;
 }
@@ -833,8 +832,7 @@ w #heroCarousel {
 }
 
 .pst_logo img {
-    /* max-width: 150px; */
-    max-width: 100%;
+    max-width: 150px;
     height: auto;
 }
 
@@ -971,8 +969,7 @@ w #heroCarousel {
 
 @media (max-width: 767px) {
     .pst_logo img {
-        /* max-width: 120px; */
-        max-width: 100%;
+        max-width: 120px;
     }
 
     .map-info iframe {
@@ -1155,8 +1152,7 @@ w #heroCarousel {
 }
 
 .content-box {
-    /* max-width: 900px; */
-    max-width: 100%;
+    max-width: 900px;
     margin: 0 auto;
     background: white;
     padding: 45px;
@@ -1331,7 +1327,7 @@ w #heroCarousel {
 }
 
 .philosophy-list li::before {
-    content: '•';
+    content: 'â€¢';
     position: absolute;
     left: 8px;
     color: #f27735;
@@ -1416,8 +1412,7 @@ w #heroCarousel {
 
 /* Policy Intro */
 .policy-intro {
-    /* max-width: 900px; */
-    max-width: 100%;
+    max-width: 900px;
     margin: 0 auto 40px;
     background: white;
     padding: 30px;
@@ -1567,7 +1562,7 @@ w #heroCarousel {
 }
 
 .policy-list li::before {
-    content: '•';
+    content: 'â€¢';
     position: absolute;
     left: 8px;
     color: #f27735;
@@ -1840,8 +1835,7 @@ w #heroCarousel {
 
 /* Career Image */
 .career-page-image {
-    /* max-width: 900px; */
-    max-width: 100%;
+    max-width: 900px;
     margin: 0 auto 40px;
     border-radius: 10px;
     overflow: hidden;
@@ -1856,8 +1850,7 @@ w #heroCarousel {
 
 /* Career Content Box */
 .career-content-box {
-    /* max-width: 900px; */
-    max-width: 100%;
+    max-width: 900px;
     margin: 0 auto;
     background: white;
     padding: 45px;
@@ -1934,8 +1927,7 @@ w #heroCarousel {
 
 /* Management Card */
 .management-card {
-    /* max-width: 900px; */
-    max-width: 100%;
+    max-width: 900px;
     margin: 0 auto 50px;
     background: white;
     padding: 45px;
@@ -2016,8 +2008,7 @@ w #heroCarousel {
 
 /* Intro Box */
 .agro-intro-box {
-    /* max-width: 900px; */
-    max-width: 100%;
+    max-width: 900px;
     margin: 0 auto 50px;
     background: white;
     padding: 40px;
@@ -2043,8 +2034,7 @@ w #heroCarousel {
 
 /* Agro Cards */
 .agro-card {
-    /* max-width: 900px; */
-    max-width: 100%;
+    max-width: 900px;
     margin: 0 auto 40px;
     background: white;
     padding: 35px;
@@ -2130,8 +2120,7 @@ w #heroCarousel {
 
 /* Projects Section */
 .agro-projects {
-    /* max-width: 900px; */
-    max-width: 100%;
+    max-width: 900px;
     margin: 0 auto;
     background: white;
     padding: 35px;
@@ -2166,7 +2155,7 @@ w #heroCarousel {
 }
 
 .agro-projects ul li::before {
-    content: '✓';
+    content: 'âœ“';
     position: absolute;
     left: 0;
     color: #4CAF50;
@@ -2209,8 +2198,7 @@ w #heroCarousel {
 
 /* Intro Box */
 .ippl-intro-box {
-    /* max-width: 900px; */
-    max-width: 100%;
+    max-width: 900px;
     margin: 0 auto 50px;
     background: white;
     padding: 40px;
@@ -2240,8 +2228,7 @@ w #heroCarousel {
 
 /* Milestones Section */
 .ippl-milestones {
-    /* max-width: 900px; */
-    max-width: 100%;
+    max-width: 900px;
     margin: 0 auto;
     background: white;
     padding: 35px;
@@ -2276,7 +2263,7 @@ w #heroCarousel {
 }
 
 .ippl-milestones ul li::before {
-    content: '•';
+    content: 'â€¢';
     position: absolute;
     left: 8px;
     color: #f27735;
@@ -2372,37 +2359,37 @@ w #heroCarousel {
     padding: 20px;
     border-bottom: 2px solid #f0f0f0;
 }
-/* 
+
 .offcanvas-logo {
     flex-grow: 1;
     text-align: center;
-} */
+}
 
-/* .offcanvas-logo img {
+.offcanvas-logo img {
     height: 80px;
     width: auto;
-} */
+}
 
-/* background: #f0f0f0; */
-/* .offcanvas .btn-close {
+.offcanvas .btn-close {
     position: absolute;
     top: 15px;
     right: 15px;
+    /* background: #f0f0f0; */
     opacity: 1;
     border-radius: 50%;
     filter: none;
     width: 32px;
     height: 32px;
-} */
+}
 
-/* .offcanvas .btn-close:hover {
+.offcanvas .btn-close:hover {
     background: #2E5C8A;
-} */
+}
 
-/* .offcanvas-body {
+.offcanvas-body {
     padding: 0;
     background: #ffffff;
-} */
+}
 
 /* Mobile Navigation Item (without dropdown) */
 .mobile-nav-item {
@@ -2515,31 +2502,31 @@ w #heroCarousel {
 }
 
 /* Off-canvas Contact Section */
-/* .offcanvas-contact {
+.offcanvas-contact {
     padding: 20px;
     background: #f8f9fa;
     margin-top: 15px;
     border-top: 1px solid #e0e0e0;
-} */
+}
 
-/* .offcanvas-contact h6 {
+.offcanvas-contact h6 {
     color: #2E5C8A;
     font-weight: 600;
     margin-bottom: 12px;
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 1px;
-} */
+}
 
-/* .offcanvas-contact-item {
+.offcanvas-contact-item {
     display: flex;
     align-items: center;
     gap: 10px;
     margin-bottom: 10px;
     font-size: 13px;
-} */
+}
 
-/* .offcanvas-contact-item i {
+.offcanvas-contact-item i {
     color: #f27735;
     font-size: 14px;
     width: 18px;
@@ -2554,10 +2541,10 @@ w #heroCarousel {
 
 .offcanvas-contact-item a:hover {
     color: #2E5C8A;
-} */
+}
 
 /* Off-canvas Social Icons */
-/* .offcanvas-social {
+.offcanvas-social {
     display: flex;
     gap: 10px;
     padding: 15px 20px 20px;
@@ -2583,7 +2570,7 @@ w #heroCarousel {
     background: #f27735;
     transform: translateY(-2px);
     color: white;
-} */
+}
 
 /* Hide desktop navigation on mobile, show mobile header */
 @media (max-width: 991px) {
@@ -2603,246 +2590,15 @@ w #heroCarousel {
     }
 }
 
-/* .offcanvas-body {
+.offcanvas-body {
     -webkit-overflow-scrolling: touch;
     overflow-y: auto;
-} */
+}
 
-/* .offcanvas-backdrop {
+.offcanvas-backdrop {
     background-color: rgba(0, 0, 0, 0.5);
-} */
+}
 
 /* canvas header end */
 
 /* custom animation  */
-
-/* ============================================
-   CRITICAL MOBILE RESPONSIVE FIXES
-   Add these styles to your existing CSS file
-   ============================================ */
-
-/* Fix for all images to prevent overflow */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Ensure containers don't overflow */
-.container {
-    max-width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-/* Fix for carousel/hero section images */
-.carousel-item img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover;
-}
-
-/* Enhanced Mobile Styles - Add to existing @media (max-width: 768px) */
-@media (max-width: 768px) {
-    
-    /* Prevent horizontal scroll */
-    body {
-        overflow-x: hidden !important;
-        max-width: 100vw;
-    }
-    
-    /* Fix carousel height for mobile */
-    .carousel-item {
-        height: 400px !important;
-    }
-    
-    /* Fix carousel caption positioning and text */
-    .carousel-caption {
-        width: 95% !important;
-        padding: 0 10px;
-    }
-    
-    .carousel-caption h1 {
-        font-size: 24px !important;
-        line-height: 1.2;
-        margin-bottom: 15px;
-    }
-    
-    .carousel-caption p {
-        font-size: 16px !important;
-        margin-bottom: 20px;
-    }
-    
-    /* Fix button size */
-    .btn-primary-custom {
-        padding: 10px 20px;
-        font-size: 14px;
-    }
-    
-    /* Fix all section containers */
-    .what-we-do .container,
-    .welcome-section .container,
-    .products-section .container,
-    .team-section .container,
-    .chairman-section .container {
-        width: 100% !important;
-        max-width: 100%;
-        padding: 0 15px;
-    }
-    
-    /* Fix service cards spacing */
-    .service-card {
-        margin-bottom: 20px;
-    }
-    
-    /* Fix welcome/content sections */
-    .welcome-content,
-    .team-content {
-        padding: 0 10px;
-        margin-top: 20px;
-    }
-    
-    /* Fix content boxes */
-    .content-box,
-    .policy-intro,
-    .agro-intro-box,
-    .ippl-intro-box {
-        padding: 25px 15px;
-    }
-    
-    /* Fix all card elements */
-    .philosophy-card,
-    .policy-card,
-    .agro-card,
-    .management-card {
-        padding: 25px 15px;
-        margin-bottom: 20px;
-    }
-    
-    /* Fix page headers */
-    .page-header h1,
-    .career-page-header h1,
-    .key-management-header h1 {
-        font-size: 28px !important;
-        line-height: 1.3;
-        padding: 0 10px;
-    }
-    
-    /* Fix top contact bar */
-    .top-bar-content {
-        width: 100% !important;
-        padding: 0 10px;
-    }
-    
-    /* Fix footer columns */
-    .footer-top .container {
-        padding: 0 15px;
-    }
-    
-    .footer-top .row > div {
-        padding: 0 15px;
-    }
-}
-
-/* Extra small devices (phones, less than 576px) */
-@media (max-width: 576px) {
-    
-    /* Further reduce carousel height */
-    .carousel-item {
-        height: 350px !important;
-    }
-    
-    .carousel-caption h1 {
-        font-size: 20px !important;
-    }
-    
-    .carousel-caption p {
-        font-size: 14px !important;
-    }
-    
-    /* Reduce section padding */
-    .what-we-do,
-    .welcome-section,
-    .products-section,
-    .team-section,
-    .chairman-section,
-    .page-content-section,
-    .career-page-section,
-    .key-management-section,
-    .agro-page-section,
-    .ippl-page-section {
-        padding: 40px 0;
-    }
-    
-    /* Fix all headings */
-    h1, h2, h3 {
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-    }
-    
-    /* Fix section titles */
-    .section-title h2 {
-        font-size: 24px;
-    }
-    
-    /* Fix product icons */
-    .product-icon-card i {
-        font-size: 40px;
-    }
-    
-    /* Mobile header bar adjustments */
-    .mobile-logo img {
-        height: 40px;
-    }
-}
-
-/* Fix for very small screens (320px and below) */
-@media (max-width: 375px) {
-    
-    .carousel-item {
-        height: 300px !important;
-    }
-    
-    .carousel-caption h1 {
-        font-size: 18px !important;
-    }
-    
-    .carousel-caption p {
-        font-size: 13px !important;
-    }
-    
-    .btn-primary-custom {
-        padding: 8px 16px;
-        font-size: 12px;
-    }
-    
-    /* Reduce padding further */
-    .content-box,
-    .philosophy-card,
-    .policy-card {
-        padding: 20px 12px;
-    }
-}
-
-/* Fix for landscape orientation on mobile */
-@media (max-width: 768px) and (orientation: landscape) {
-    .carousel-item {
-        height: 350px !important;
-    }
-    
-    .carousel-caption h1 {
-        font-size: 22px !important;
-    }
-}
-
-/* Additional fixes for Bootstrap grid system */
-@media (max-width: 768px) {
-    .row {
-        margin-left: 0;
-        margin-right: 0;
-    }
-    
-    .col, [class*="col-"] {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-}
