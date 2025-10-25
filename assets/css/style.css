@@ -2198,7 +2198,7 @@ w #heroCarousel {
 
 /* Intro Box */
 .ippl-intro-box {
-    max-width: 900px;
+    /* max-width: 900px; */
     margin: 0 auto 50px;
     background: white;
     padding: 40px;
@@ -2228,7 +2228,7 @@ w #heroCarousel {
 
 /* Milestones Section */
 .ippl-milestones {
-    max-width: 900px;
+    /* max-width: 900px; */
     margin: 0 auto;
     background: white;
     padding: 35px;
