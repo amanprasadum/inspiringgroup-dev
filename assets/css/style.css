@@ -1835,7 +1835,7 @@ w #heroCarousel {
 
 /* Career Image */
 .career-page-image {
-    max-width: 900px;
+    /* max-width: 900px; */
     margin: 0 auto 40px;
     border-radius: 10px;
     overflow: hidden;
